@@ -48,7 +48,4 @@ class UserViewSet(viewsets.ModelViewSet):
 
         user = User.objects.create_user(**data)
         if user:
-            user = authenticate(request, username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return Response({'ok': True})
+            return self.login(request)

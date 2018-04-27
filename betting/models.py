@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta, timezone
+
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
@@ -26,7 +28,7 @@ class Points(models.Model):
 
 class Group(models.Model):
     name = models.CharField(max_length=255)
-    start = models.DateTimeField()
+    start = models.DateTimeField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     points = models.ForeignKey(Points, on_delete=models.CASCADE)
@@ -36,19 +38,9 @@ class Competitor(models.Model):
     name = models.CharField(max_length=255)
 
 
-class Bet(models.Model):
-    score_a = models.IntegerField()
-    score_b = models.IntegerField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    validated = models.BooleanField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-
 class Game(models.Model):
     order = models.IntegerField()
     start = models.DateTimeField()
-    end = models.DateTimeField()
     score_a = models.IntegerField(null=True)
     score_b = models.IntegerField(null=True)
     group = models.ForeignKey(Group, on_delete=models.CASCADE,
@@ -59,4 +51,20 @@ class Game(models.Model):
                                      related_name='competitor_b')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    bets = models.ManyToManyField(to=Bet)
+    bets = models.ManyToManyField(User, through='Bet')
+
+    @property
+    def locked(self):
+        now = datetime.now(timezone.utc)
+        diff = self.start - now
+        return diff / timedelta(minutes=1) < 15
+
+
+class Bet(models.Model):
+    score_a = models.IntegerField(null=True)
+    score_b = models.IntegerField(null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    game = models.ForeignKey('Game', on_delete=models.CASCADE)
+    validated = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

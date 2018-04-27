@@ -1,5 +1,3 @@
-from hashlib import md5
-
 from rest_framework import serializers
 
 from betting.models import Group, Points, Competitor, Game, User, Bet
@@ -32,17 +30,33 @@ class GameSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Game
-        fields = ('id', 'start', 'end', 'score_a', 'score_b', 'group',
-                  'competitor_a', 'competitor_b', 'order',)
-
-
-class BetSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Bet
-        fields = ('id', 'user', 'score_a', 'score_b', 'validated',)
+        fields = ('id', 'start', 'score_a', 'score_b', 'group',
+                  'competitor_a', 'competitor_b', 'order', 'locked')
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'avatar', 'first_name', )
+
+
+class BetWithGameSerializer(serializers.ModelSerializer):
+    game = GameSerializer(read_only=True)
+
+    class Meta:
+        model = Bet
+        fields = ('id', 'user', 'game', 'score_a', 'score_b', 'validated',)
+
+
+class BetWithUserSerializer(serializers.ModelSerializer):
+    user = UserSerializer(read_only=True)
+
+    class Meta:
+        model = Bet
+        fields = ('id', 'user', 'game', 'score_a', 'score_b', 'validated',)
+
+
+class BetSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Bet
+        fields = ('id', 'user', 'game', 'score_a', 'score_b', 'validated',)

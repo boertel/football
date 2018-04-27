@@ -4,4 +4,7 @@ from rest_framework.response import Response
 
 @api_view()
 def auth(request):
-    return Response({'authenticated': request.user.is_authenticated})
+    return Response({
+        'authenticated': request.user.is_authenticated,
+        'id': request.user.id,
+    })
