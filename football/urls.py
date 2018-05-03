@@ -17,10 +17,15 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 
 from django.shortcuts import render
+from django.conf import settings
 
 
 def default_view(request):
-    return render(request, 'index.html')
+    bundle_name = request.GET.get('bundle', settings.BUNDLE_NAME)
+    context = {
+        'BUNDLE_URL': settings.BUNDLE_HOST + bundle_name + '.js'
+    }
+    return render(request, 'index.html', context)
 
 
 urlpatterns = [

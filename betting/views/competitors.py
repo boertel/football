@@ -1,5 +1,4 @@
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated
 
 from betting.serializers import CompetitorSerializer
 from betting.models import Competitor
@@ -8,4 +7,3 @@ from betting.models import Competitor
 class CompetitorViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Competitor.objects.all()
     serializer_class = CompetitorSerializer
-    permission_classes = (IsAuthenticated,)

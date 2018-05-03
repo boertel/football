@@ -11,6 +11,7 @@ from betting.models import User
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = ()
 
     @action(methods=['get'], detail=False)
     def me(self, request):
@@ -43,7 +44,7 @@ class UserViewSet(viewsets.ModelViewSet):
             'username': username,
             'email': request.data['username'],
             'password': password,
-            'first_name': request.data['first_name'],
+            'full_name': request.data['full_name'],
         }
 
         user = User.objects.create_user(**data)

@@ -129,10 +129,18 @@ USE_L10N = True
 USE_TZ = True
 
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+}
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
 
+BUNDLE_HOST = os.environ.get('BUNDLE_HOST', 'http://localhost:3000/static/js/')
+BUNDLE_NAME = os.environ.get('BUNDLE_NAME', 'bundle.js')
 
 django_heroku.settings(locals(), staticfiles=False)

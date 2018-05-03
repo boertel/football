@@ -1,5 +1,4 @@
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.exceptions import PermissionDenied
 
 from betting.serializers import BetSerializer, BetWithUserSerializer, BetWithGameSerializer
@@ -9,7 +8,6 @@ from betting.models import Bet, Game
 class BetViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Bet.objects.all()
     serializer_class = BetSerializer
-    permission_classes = (IsAuthenticated,)
 
     def get_serializer_class(self):
         gameId = self.request.query_params.get('game', None)

@@ -23,21 +23,28 @@ class CompetitorSerializer(serializers.ModelSerializer):
         fields = ('id', 'name',)
 
 
+class BetSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Bet
+        fields = ('id', 'user', 'game', 'score_a', 'score_b', 'validated',)
+
+
 class GameSerializer(serializers.ModelSerializer):
     competitor_a = CompetitorSerializer(read_only=True)
     competitor_b = CompetitorSerializer(read_only=True)
     group = GroupSerializer(read_only=True)
+    bet = BetSerializer(read_only=True)
 
     class Meta:
         model = Game
         fields = ('id', 'start', 'score_a', 'score_b', 'group',
-                  'competitor_a', 'competitor_b', 'order', 'locked')
+                  'competitor_a', 'competitor_b', 'order', 'locked', 'bet')
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'avatar', 'first_name', )
+        fields = ('id', 'avatar', 'full_name', 'verified', 'gravatar', 'points',)
 
 
 class BetWithGameSerializer(serializers.ModelSerializer):
@@ -51,12 +58,6 @@ class BetWithGameSerializer(serializers.ModelSerializer):
 class BetWithUserSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
 
-    class Meta:
-        model = Bet
-        fields = ('id', 'user', 'game', 'score_a', 'score_b', 'validated',)
-
-
-class BetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bet
         fields = ('id', 'user', 'game', 'score_a', 'score_b', 'validated',)
