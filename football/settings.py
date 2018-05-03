@@ -141,6 +141,7 @@ REST_FRAMEWORK = {
 STATIC_URL = '/static/'
 
 BUNDLE_HOST = os.environ.get('BUNDLE_HOST', 'http://localhost:3000/static/js/')
-BUNDLE_NAME = os.environ.get('BUNDLE_NAME', 'bundle.js')
+BUNDLE_VERSION = os.environ.get('BUNDLE_VERSION')
+STATIC_HOST = os.environ.get('STATIC_HOST', '')
 
 django_heroku.settings(locals(), staticfiles=False)

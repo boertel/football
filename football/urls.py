@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import os
 from django.contrib import admin
 from django.urls import path, include, re_path
 
@@ -21,11 +22,15 @@ from django.conf import settings
 
 
 def default_view(request):
-    bundle_name = request.GET.get('bundle', settings.BUNDLE_NAME)
+    BUNDLE_VERSION = request.GET.get('bundle', settings.BUNDLE_VERSION)
     context = {
-        'BUNDLE_URL': settings.BUNDLE_HOST + bundle_name + '.js'
+        'BUNDLE_PATH': os.path.join(settings.BUNDLE_HOST, BUNDLE_VERSION),
+        'STATIC_HOST': settings.STATIC_HOST,
     }
-    return render(request, 'index.html', context)
+    response = render(request, 'index.html', context)
+    if 'bundle' in request.GET:
+        response.set_cookie('bundle', BUNDLE_VERSION)
+    return response
 
 
 urlpatterns = [
@@ -33,5 +38,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/v1/', include('betting.urls')),
     path('accounts/', include('account.urls')),
-    #re_path(r'^.*', default_view),
 ]
+
+if not settings.DEBUG:
+    urlpatterns.append(re_path(r'^.*', default_view))
