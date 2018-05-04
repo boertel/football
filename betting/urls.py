@@ -11,6 +11,5 @@ router.register(r'bets', views.BetViewSet)
 
 urlpatterns = [
     path('auth', views.auth),
-    path('tasks', views.TasksView.as_view()),
     re_path(r'^', include(router.urls)),
 ]

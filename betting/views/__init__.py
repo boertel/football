@@ -5,4 +5,3 @@ from .bets import BetViewSet
 from .users import UserViewSet
 from .auth import auth
 from .bets import BetViewSet
-from .tasks import TasksView

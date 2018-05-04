@@ -14,6 +14,12 @@ class UserViewSet(viewsets.ModelViewSet):
     permission_classes = ()
 
     @action(methods=['get'], detail=False)
+    def leaderboard(self, request):
+        users = self.get_queryset().order_by('points', 'full_name')
+        serializer = self.get_serializer(users, many=True)
+        return Response(serializer.data)
+
+    @action(methods=['get'], detail=False)
     def me(self, request):
         if request.user:
             serializer = self.get_serializer(request.user)
