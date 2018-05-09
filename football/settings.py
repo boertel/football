@@ -56,6 +56,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
 )
