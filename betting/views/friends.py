@@ -25,14 +25,14 @@ class FriendsViewSet(viewsets.ModelViewSet):
             return ReadOnlyFriendsSerializer
         return WriteFriendsSerializer
 
-    @action(methods=['get'], detail=True)
+    @action(methods=['post'], detail=True)
     def join(self, request, pk):
         friends = self.get_object()
         friends.members.add(self.request.user)
         serializer = self.get_serializer(friends)
         return Response(serializer.data)
 
-    @action(methods=['get'], detail=True)
+    @action(methods=['post'], detail=True)
     def leave(self, request, pk):
         friends = self.get_object()
         friends.members.remove(self.request.user)
