@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from betting.models import Group, Points, Competitor, Game, User, Bet
+from betting.models import Group, Points, Competitor, Game, User, Bet, Friends
 
 
 class PointsSerializer(serializers.ModelSerializer):
@@ -61,3 +61,19 @@ class BetWithUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bet
         fields = ('id', 'user', 'game', 'score_a', 'score_b', 'validated',)
+
+
+class ReadOnlyFriendsSerializer(serializers.ModelSerializer):
+    owner = UserSerializer(read_only=True)
+    members = UserSerializer(many=True)
+
+    class Meta:
+        model = Friends
+        fields = ('id', 'owner', 'name', 'members', )
+
+
+class WriteFriendsSerializer(ReadOnlyFriendsSerializer):
+    members = serializers.PrimaryKeyRelatedField(many=True, read_only=False, queryset=User.objects.all())
+
+    class Meta(ReadOnlyFriendsSerializer.Meta):
+        pass

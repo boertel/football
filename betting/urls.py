@@ -8,6 +8,7 @@ router.register(r'competitors', views.CompetitorViewSet)
 router.register(r'games', views.GameViewSet)
 router.register(r'users', views.UserViewSet)
 router.register(r'bets', views.BetViewSet)
+router.register(r'friends', views.FriendsViewSet)
 
 urlpatterns = [
     path('auth', views.auth),

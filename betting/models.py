@@ -10,22 +10,16 @@ class User(AbstractUser):
     full_name = models.CharField(max_length=255)
     verified = models.BooleanField(default=False)
     points = models.IntegerField(default=0)
-    friends = models.ManyToManyField('self', symmetrical=False,
-                                     through='Relationship',
-                                     related_name='friends+')
 
     @property
     def gravatar(self):
         return hashlib.md5(self.email.encode('utf-8')).hexdigest()
 
 
-class Relationship(models.Model):
-    user = models.ForeignKey(User, related_name='from_user',
-                             on_delete=models.CASCADE)
-    to_user = models.ForeignKey(User, related_name='to_user',
-                                on_delete=models.CASCADE)
-    favorite = models.BooleanField()
-    created_at = models.DateTimeField(auto_now_add=True)
+class Friends(models.Model):
+    name = models.CharField(max_length=255)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owner')
+    members = models.ManyToManyField(User, related_name='members')
 
 
 class Points(models.Model):

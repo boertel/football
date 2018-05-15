@@ -5,3 +5,4 @@ from .bets import BetViewSet
 from .users import UserViewSet
 from .auth import auth
 from .bets import BetViewSet
+from .friends import FriendsViewSet
