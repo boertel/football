@@ -4,15 +4,7 @@ from rest_framework.decorators import action
 
 from betting.serializers import ReadOnlyFriendsSerializer, WriteFriendsSerializer
 from betting.models import Friends
-
-
-class IsOwnerOrReadOnly(permissions.BasePermission):
-    message = 'Adding friends not allowed.'
-
-    def has_object_permission(self, request, view, obj):
-        if request.method in permissions.SAFE_METHODS:
-            return True
-        return obj.owner == request.user
+from betting.permissions import IsOwnerOrReadOnly
 
 
 class FriendsViewSet(viewsets.ModelViewSet):

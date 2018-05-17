@@ -8,13 +8,15 @@ from rest_framework.decorators import action
 from betting.serializers import GameSerializer, BetSerializer
 from betting.exceptions import GameLocked
 from betting.models import Game, Bet
+from betting.permissions import IsAdminOrReadOnly
 
 
-class GameViewSet(viewsets.ReadOnlyModelViewSet):
+class GameViewSet(viewsets.ModelViewSet):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
     filter_backends = (filters.OrderingFilter,)
     ordering_fields = ('start', 'order')
+    permissions = (IsAdminOrReadOnly,)
 
     def get_queryset(self):
         bets = {}

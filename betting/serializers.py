@@ -44,7 +44,7 @@ class GameSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'avatar', 'full_name', 'verified', 'gravatar', 'points',)
+        fields = ('id', 'avatar', 'full_name', 'verified', 'gravatar', 'points', 'is_superuser',)
 
 
 class BetWithGameSerializer(serializers.ModelSerializer):
