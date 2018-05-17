@@ -1,5 +1,6 @@
 from rest_framework import viewsets, permissions
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import action
 
 from betting.serializers import ReadOnlyFriendsSerializer, WriteFriendsSerializer
@@ -17,14 +18,14 @@ class FriendsViewSet(viewsets.ModelViewSet):
             return ReadOnlyFriendsSerializer
         return WriteFriendsSerializer
 
-    @action(methods=['post'], detail=True)
+    @action(methods=['post'], detail=True, permission_classes=[IsAuthenticated])
     def join(self, request, pk):
         friends = self.get_object()
         friends.members.add(self.request.user)
         serializer = self.get_serializer(friends)
         return Response(serializer.data)
 
-    @action(methods=['post'], detail=True)
+    @action(methods=['post'], detail=True, permission_classes=[IsAuthenticated])
     def leave(self, request, pk):
         friends = self.get_object()
         friends.members.remove(self.request.user)
