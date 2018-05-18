@@ -49,6 +49,21 @@ class Bet(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def points(self, points):
+        game = self.game
+        if game.score_a == self.score_a and game.score_b == self.score_b:
+            return points.perfect
+        else:
+            if (
+                game.score_a > game.score_b and self.score_a > self.score_b or
+                game.score_a == game.score_b and self.score_a == self.score_b or
+                game.score_a < game.score_b and self.score_a < self.score_b
+            ):
+                return group.points.win
+            else:
+                return group.points.loss
+        return None
+
 
 class GameManager(models.Manager):
     def next(self, user, limit=1):
@@ -74,6 +89,13 @@ class Game(models.Model):
     bets = models.ManyToManyField(User, through='Bet')
 
     objects = GameManager()
+
+    def compute_points(self):
+        from betting.tasks import update_points
+        if self.score_a is not None and self.score_b is not None:
+            update_points.delay(self.id)
+            return True
+        return False
 
     @property
     def locked(self):

@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%s$$%!!e%kud9pa82t$)c@*alw+oh*tg$7tx49-kc%9=q#cn_p'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG') == '1'
@@ -97,6 +97,8 @@ DATABASES = {
     }
 }
 
+
+CELERY_BROKER_URL = os.environ.get('BROKER_URL')
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators

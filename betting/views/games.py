@@ -4,6 +4,7 @@ from rest_framework import viewsets, filters
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAdminUser
 
 from betting.serializers import GameSerializer, BetSerializer
 from betting.exceptions import GameLocked
@@ -45,6 +46,12 @@ class GameViewSet(viewsets.ModelViewSet):
         if len(queryset) == 0:
             raise NotFound()
         return queryset[0]
+
+    @action(methods=['post'], detail=True, permissions=[IsAdminUser])
+    def compute(self, request, pk=None):
+        game = self.get_object()
+        ok = game.compute_points()
+        return Response({'ok': ok})
 
     @action(methods=['get', 'post', 'put'], detail=True)
     def bets(self, request, pk=None):
