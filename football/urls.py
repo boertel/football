@@ -25,6 +25,7 @@ def default_view(request):
     BUNDLE_VERSION = request.GET.get('bundle', settings.BUNDLE_VERSION)
     context = {
         'BUNDLE_PATH': os.path.join(settings.BUNDLE_HOST, BUNDLE_VERSION),
+        'BUNDLE_VERSION': BUNDLE_VERSION,
         'STATIC_HOST': settings.STATIC_HOST,
     }
     response = render(request, 'index.html', context)
