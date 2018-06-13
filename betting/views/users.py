@@ -28,7 +28,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
     @action(methods=['post'], detail=False)
     def login(self, request):
-        username = request.data['username']
+        username = request.data['username'].lower()
         password = request.data['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
