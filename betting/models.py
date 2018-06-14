@@ -51,6 +51,7 @@ class Bet(models.Model):
 
     def points(self, points):
         game = self.game
+        group = game.group
         if game.score_a == self.score_a and game.score_b == self.score_b:
             return points.perfect
         else:
