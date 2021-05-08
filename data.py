@@ -1,31 +1,52 @@
 import json
 from betting.models import Competitor, Game, Points, Group
 
-'''
+"""
 function extract(game) { return { group: game.find('.fi__info__group').text(), competitor_a: game.find('.home .fi-t__nText').text(), competitor_b: game.find('.away .fi-t__nText').text(), start: '2018-' + (String(game.find('.fi-s__score.fi-s__date-HHmm').data('daymonthutc')).substring(2, 4)) + '-' + (String(game.find('.fi-s__score.fi-s__date-HHmm').data('daymonthutc')).substring(0, 2)) + 'T' + game.find('.fi-s__score.fi-s__date-HHmm').data('timeutc') + ':00.000Z' }}
 output = []; $('.fi-mu.fixture').each(function() { output.push(extract($(this))) })
 JSON.stringify(output.filter(o => o.group.length))
-'''
+"""
 
-data = json.loads('[{"group":"Group A","competitor_a":"Russia","competitor_b":"Saudi Arabia","start":"2018-06-14T15:00:00.000Z"},{"group":"Group A","competitor_a":"Egypt","competitor_b":"Uruguay","start":"2018-06-15T12:00:00.000Z"},{"group":"Group B","competitor_a":"Morocco","competitor_b":"IR Iran","start":"2018-06-15T15:00:00.000Z"},{"group":"Group B","competitor_a":"Portugal","competitor_b":"Spain","start":"2018-06-15T18:00:00.000Z"},{"group":"Group C","competitor_a":"France","competitor_b":"Australia","start":"2018-06-16T10:00:00.000Z"},{"group":"Group D","competitor_a":"Argentina","competitor_b":"Iceland","start":"2018-06-16T13:00:00.000Z"},{"group":"Group C","competitor_a":"Peru","competitor_b":"Denmark","start":"2018-06-16T16:00:00.000Z"},{"group":"Group D","competitor_a":"Croatia","competitor_b":"Nigeria","start":"2018-06-16T19:00:00.000Z"},{"group":"Group E","competitor_a":"Costa Rica","competitor_b":"Serbia","start":"2018-06-17T12:00:00.000Z"},{"group":"Group F","competitor_a":"Germany","competitor_b":"Mexico","start":"2018-06-17T15:00:00.000Z"},{"group":"Group E","competitor_a":"Brazil","competitor_b":"Switzerland","start":"2018-06-17T18:00:00.000Z"},{"group":"Group F","competitor_a":"Sweden","competitor_b":"Korea Republic","start":"2018-06-18T12:00:00.000Z"},{"group":"Group G","competitor_a":"Belgium","competitor_b":"Panama","start":"2018-06-18T15:00:00.000Z"},{"group":"Group G","competitor_a":"Tunisia","competitor_b":"England","start":"2018-06-18T18:00:00.000Z"},{"group":"Group H","competitor_a":"Colombia","competitor_b":"Japan","start":"2018-06-19T12:00:00.000Z"},{"group":"Group H","competitor_a":"Poland","competitor_b":"Senegal","start":"2018-06-19T15:00:00.000Z"},{"group":"Group A","competitor_a":"Russia","competitor_b":"Egypt","start":"2018-06-19T18:00:00.000Z"},{"group":"Group B","competitor_a":"Portugal","competitor_b":"Morocco","start":"2018-06-20T12:00:00.000Z"},{"group":"Group A","competitor_a":"Uruguay","competitor_b":"Saudi Arabia","start":"2018-06-20T15:00:00.000Z"},{"group":"Group B","competitor_a":"IR Iran","competitor_b":"Spain","start":"2018-06-20T18:00:00.000Z"},{"group":"Group C","competitor_a":"Denmark","competitor_b":"Australia","start":"2018-06-21T12:00:00.000Z"},{"group":"Group C","competitor_a":"France","competitor_b":"Peru","start":"2018-06-21T15:00:00.000Z"},{"group":"Group D","competitor_a":"Argentina","competitor_b":"Croatia","start":"2018-06-21T18:00:00.000Z"},{"group":"Group E","competitor_a":"Brazil","competitor_b":"Costa Rica","start":"2018-06-22T12:00:00.000Z"},{"group":"Group D","competitor_a":"Nigeria","competitor_b":"Iceland","start":"2018-06-22T15:00:00.000Z"},{"group":"Group E","competitor_a":"Serbia","competitor_b":"Switzerland","start":"2018-06-22T18:00:00.000Z"},{"group":"Group G","competitor_a":"Belgium","competitor_b":"Tunisia","start":"2018-06-23T12:00:00.000Z"},{"group":"Group F","competitor_a":"Korea Republic","competitor_b":"Mexico","start":"2018-06-23T15:00:00.000Z"},{"group":"Group F","competitor_a":"Germany","competitor_b":"Sweden","start":"2018-06-23T18:00:00.000Z"},{"group":"Group G","competitor_a":"England","competitor_b":"Panama","start":"2018-06-24T12:00:00.000Z"},{"group":"Group H","competitor_a":"Japan","competitor_b":"Senegal","start":"2018-06-24T15:00:00.000Z"},{"group":"Group H","competitor_a":"Poland","competitor_b":"Colombia","start":"2018-06-24T18:00:00.000Z"},{"group":"Group A","competitor_a":"Uruguay","competitor_b":"Russia","start":"2018-06-25T14:00:00.000Z"},{"group":"Group A","competitor_a":"Saudi Arabia","competitor_b":"Egypt","start":"2018-06-25T14:00:00.000Z"},{"group":"Group B","competitor_a":"Spain","competitor_b":"Morocco","start":"2018-06-25T18:00:00.000Z"},{"group":"Group B","competitor_a":"IR Iran","competitor_b":"Portugal","start":"2018-06-25T18:00:00.000Z"},{"group":"Group C","competitor_a":"Denmark","competitor_b":"France","start":"2018-06-26T14:00:00.000Z"},{"group":"Group C","competitor_a":"Australia","competitor_b":"Peru","start":"2018-06-26T14:00:00.000Z"},{"group":"Group D","competitor_a":"Iceland","competitor_b":"Croatia","start":"2018-06-26T18:00:00.000Z"},{"group":"Group D","competitor_a":"Nigeria","competitor_b":"Argentina","start":"2018-06-26T18:00:00.000Z"},{"group":"Group F","competitor_a":"Mexico","competitor_b":"Sweden","start":"2018-06-27T14:00:00.000Z"},{"group":"Group F","competitor_a":"Korea Republic","competitor_b":"Germany","start":"2018-06-27T14:00:00.000Z"},{"group":"Group E","competitor_a":"Serbia","competitor_b":"Brazil","start":"2018-06-27T18:00:00.000Z"},{"group":"Group E","competitor_a":"Switzerland","competitor_b":"Costa Rica","start":"2018-06-27T18:00:00.000Z"},{"group":"Group H","competitor_a":"Japan","competitor_b":"Poland","start":"2018-06-28T14:00:00.000Z"},{"group":"Group H","competitor_a":"Senegal","competitor_b":"Colombia","start":"2018-06-28T14:00:00.000Z"},{"group":"Group G","competitor_a":"England","competitor_b":"Belgium","start":"2018-06-28T18:00:00.000Z"},{"group":"Group G","competitor_a":"Panama","competitor_b":"Tunisia","start":"2018-06-28T18:00:00.000Z"}]')
+"""
+https://www.freetips.com/football/uefa-european-championship/euro-2021-fixtures-20200317-0007/
+function parseDate(date, time) {
+    const [day, month] = date.split(' ')
+    const [hour] = time.split(':')
+    return `2021-${month === 'June' ? '06' : '07'}-${day}T${hour}:00:00.000Z`
+}
 
-groupStage = Points.objects.create(perfect=100, win=50, loss=0)
+function extract(tbody) {
+    return Array.from(tbody.querySelectorAll('tr')).map(tr => {
+        return {
+            start: parseDate(tr.children[0].innerText, tr.children[1].innerText),
+            competitor_a: tr.children[2].innerText,
+            competitor_b: tr.children[3].innerText,
+            group: tr.children[4].innerText,
+            venue: tr.children[5].innerText,
+        }
+    })
+}
+"""
 
-defaults = {'points': groupStage}
+with open("./euro-2021.json") as file:
+    data = json.load(file)
 
-index = 1
-for d in data:
-    group, created = Group.objects.get_or_create(name=d['group'],
-                                                 defaults=defaults)
-    competitor_a, created = Competitor.objects.get_or_create(name=d['competitor_a'])
-    competitor_b, created = Competitor.objects.get_or_create(name=d['competitor_b'])
+    groupStage = Points.objects.create(perfect=100, win=50, loss=0)
 
-    values = {
-        'group': group,
-        'competitor_a': competitor_a,
-        'competitor_b': competitor_b,
-        'start': d['start'],
-        'order': index,
-    }
-    index += 1
-    Game.objects.create(**values)
+    defaults = {"points": groupStage}
+
+    index = 1
+    for d in data:
+        group, created = Group.objects.get_or_create(name=d["group"], defaults=defaults)
+        competitor_a, created = Competitor.objects.get_or_create(name=d["competitor_a"])
+        competitor_b, created = Competitor.objects.get_or_create(name=d["competitor_b"])
+
+        values = {
+            "group": group,
+            "competitor_a": competitor_a,
+            "competitor_b": competitor_b,
+            "start": d["start"],
+            "order": index,
+        }
+        index += 1
+        Game.objects.create(**values)
