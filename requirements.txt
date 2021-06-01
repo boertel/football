@@ -1,20 +1,36 @@
 amqp==2.2.2
-billiard==3.5.0.3
-celery==4.1.0
-certifi==2018.4.16
+appdirs @ file:///Users/ben/Library/Caches/pypoetry/artifacts/47/cf/4f/4ef02fb715aa36daeebad18cc5570126159c659c41c7b5ec46a7387d9b/appdirs-1.4.4-py2.py3-none-any.whl
+asgiref @ file:///Users/ben/Library/Caches/pypoetry/artifacts/fe/db/83/0ae447caa7129971ac3189887098d047d0257c23b979d0f76c93496c95/asgiref-3.3.4-py3-none-any.whl
+black @ file:///Users/ben/Library/Caches/pypoetry/artifacts/77/e8/90/4144eb9812def7760d4334a70cb9a39507d28ec058222260943e5153eb/black-21.5b0-py3-none-any.whl
+certifi @ file:///Users/ben/Library/Caches/pypoetry/artifacts/d8/df/24/ed696681f34f8916b0aef99138db9a94e37d54684b9829af34a7fd4e39/certifi-2020.12.5-py2.py3-none-any.whl
+chardet @ file:///Users/ben/Library/Caches/pypoetry/artifacts/11/63/f9/797eda27963177a6b75a340f62aa194d462ea69e6b0dbb77a651fa2b62/chardet-4.0.0-py2.py3-none-any.whl
+click @ file:///Users/ben/Library/Caches/pypoetry/artifacts/e2/79/34/a23e9d2f683ed66be11ec3bd760dec3a2fe228cfdedf2071bcf0531b06/click-7.1.2-py2.py3-none-any.whl
 dj-database-url==0.5.0
-Django==2.0.4
-django-cors-headers==2.2.0
+Django @ file:///Users/ben/Library/Caches/pypoetry/artifacts/3a/35/87/d49a5f4fb12f98e5b8a25580a7dfc827c4d92cea09be704ab057aaa42b/Django-3.2.2-py3-none-any.whl
+django-anymail @ file:///Users/ben/Library/Caches/pypoetry/artifacts/a9/d8/be/2de8ad994c648f8e43b1df53094321100a3aff1442b7aa3051d522b6aa/django_anymail-8.3-py3-none-any.whl
+django-cors-headers @ file:///Users/ben/Library/Caches/pypoetry/artifacts/af/bb/1b/bdd289e2963e0a977104b209d427b05dca6afdddc99d2aeb8247215564/django_cors_headers-3.7.0-py3-none-any.whl
 django-heroku==0.3.1
 django-rest-framework==0.1.0
-djangorestframework==3.8.2
+django-rq @ file:///Users/ben/Library/Caches/pypoetry/artifacts/c2/fb/02/3f92988b2fb9a94feafdbc04752bbeb4995956d41cbb740d047489b730/django_rq-2.4.1-py2.py3-none-any.whl
+djangorestframework @ file:///Users/ben/Library/Caches/pypoetry/artifacts/e1/57/21/bfde361af294b9c9cd77dcab0182e58c2938fcee29a4e5724ef4fed0e0/djangorestframework-3.12.4-py3-none-any.whl
 gunicorn==19.7.1
-kombu==4.1.0
+idna @ file:///Users/ben/Library/Caches/pypoetry/artifacts/ef/7f/a9/19cc0b8760bdf6f696290c06532496f8bb29fbdaad044f852fed00ec82/idna-2.10-py2.py3-none-any.whl
+mypy-extensions @ file:///Users/ben/Library/Caches/pypoetry/artifacts/92/45/bf/1807ce854ff668d92602207a37bfa9316def2a3f257bd03c4c5be4bc9b/mypy_extensions-0.4.3-py2.py3-none-any.whl
+pathspec @ file:///Users/ben/Library/Caches/pypoetry/artifacts/40/8b/b2/80a6945971d8475bcc04d09afec4845855dd74f68da6a4c18bbf8f7784/pathspec-0.8.1-py2.py3-none-any.whl
 pipenv==2018.5.18
+psycopg2==2.8.6
 psycopg2-binary==2.8.6
-pytz==2018.3
+python-decouple @ file:///Users/ben/Library/Caches/pypoetry/artifacts/d2/0b/b5/ae15ff5121558626e78951022bcfa47d4c5a945621354ac4d376395d30/python_decouple-3.4-py3-none-any.whl
+pytz @ file:///Users/ben/Library/Caches/pypoetry/artifacts/b0/a7/8d/54de3ab4d1ff29abbbca1e9ccbaefdc2a1b290138311b84f73bee16de1/pytz-2021.1-py2.py3-none-any.whl
 raven==6.8.0
-redis==2.10.6
+redis @ file:///Users/ben/Library/Caches/pypoetry/artifacts/1f/cc/e8/a2e4249977cc5b36425bd02e5ab9e4d4a586000e8798342ffd415576fb/redis-3.5.3-py2.py3-none-any.whl
+regex @ file:///Users/ben/Library/Caches/pypoetry/artifacts/9c/e7/ed/3869d481fac6c604cdb6b642a68f49857a4cee7763456dba3dc1aa546d/regex-2021.4.4.tar.gz
+requests @ file:///Users/ben/Library/Caches/pypoetry/artifacts/22/0a/9d/0df883fbffbb406d0cddbb35e881e4ac6bfb8f0dee8733056b6a054bf7/requests-2.25.1-py2.py3-none-any.whl
+rq @ file:///Users/ben/Library/Caches/pypoetry/artifacts/a3/20/5a/105646e9ecbd8075941253304763055c8df995b656113f67c610ce9475/rq-1.8.0-py2.py3-none-any.whl
+sentry-sdk @ file:///Users/ben/Library/Caches/pypoetry/artifacts/53/a2/79/72341481e61f3f85b00a5160d840cdc17dd2a9b0a981c85ac2cfacfbf3/sentry_sdk-1.1.0-py2.py3-none-any.whl
+sqlparse @ file:///Users/ben/Library/Caches/pypoetry/artifacts/bc/af/02/8aa71b17fd39b26b858293918c5c6412f83768a0bfd0a4626f660aa5f8/sqlparse-0.4.1-py3-none-any.whl
+toml @ file:///Users/ben/Library/Caches/pypoetry/artifacts/6b/6a/c9/53b19f7870a77d855e8b05ecdc98193944e5d246dafe11bbcad850ecba/toml-0.10.2-py2.py3-none-any.whl
+urllib3 @ file:///Users/ben/Library/Caches/pypoetry/artifacts/fa/fd/9d/56169af5b3d1505ce8a40dc152136e8733b2df5060a6f86f013a1a9b3d/urllib3-1.26.4-py2.py3-none-any.whl
 vine==1.1.4
 virtualenv==15.2.0
 virtualenv-clone==0.3.0
