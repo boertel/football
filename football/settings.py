@@ -31,7 +31,6 @@ sentry_sdk.init(
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-WEB_DIRECTORY = config("COMMIT", default="latest")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -102,6 +101,29 @@ TEMPLATES = [
         },
     },
 ]
+if not DEBUG:
+    TEMPLATES.append(
+        {
+            "BACKEND": "django.template.backends.django.DjangoTemplates",
+            "NAME": "s3",
+            "DIRS": [],
+            "APP_DIRS": False,
+            "OPTIONS": {
+                "loaders": [
+                    (
+                        "django.template.loaders.cached.Loader",
+                        ["web.loaders.S3TemplateLoader"],
+                    )
+                ],
+                "context_processors": [
+                    "django.template.context_processors.debug",
+                    "django.template.context_processors.request",
+                    "django.contrib.auth.context_processors.auth",
+                    "django.contrib.messages.context_processors.messages",
+                ],
+            },
+        }
+    )
 
 WSGI_APPLICATION = "football.wsgi.application"
 
@@ -152,10 +174,23 @@ REST_FRAMEWORK = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = "/static/"
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
-BUNDLE_HOST = os.environ.get("BUNDLE_HOST", "http://localhost:3000/static/js/")
-BUNDLE_VERSION = os.environ.get("BUNDLE_VERSION")
+STATIC_URL = "/static/"
+STATICFILES_LOCATION = "static"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+STATICFILES_DIRS = []
+
+MEDIAFILES_LOCATION = "media"
+
+AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID", default=None)
+AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY", default=None)
+AWS_STORAGE_BUCKET_NAME = config("AWS_S3_BUCKET_NAME", default=None)
+AWS_DEFAULT_ACL = "public-read"
+AWS_QUERYSTRING_AUTH = False
+
+WEB_DIRECTORY = config("COMMIT", default="latest")
+
 STATIC_HOST = os.environ.get("STATIC_HOST", "")
 
 EMAIL_BACKEND = "anymail.backends.postmark.EmailBackend"

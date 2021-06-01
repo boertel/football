@@ -13,6 +13,7 @@ djangorestframework = "^3.12.4"
 python-decouple = "^3.4"
 django-rq = "^2.4.1"
 django-anymail = {extras = ["postmark"], version = "^8.3"}
+django-storages = "^1.11.1"
 
 [tool.poetry.dev-dependencies]
 black = "^21.5b0"

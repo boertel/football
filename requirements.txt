@@ -12,6 +12,7 @@ django-cors-headers==3.7.0
 django-heroku==0.3.1
 django-rest-framework==0.1.0
 django-rq==2.4.1
+django-storages==1.11.1
 djangorestframework==3.12.4
 gunicorn==19.7.1
 idna==2.10
