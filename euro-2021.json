@@ -1,0 +1,254 @@
+[
+  {
+    "start": "2021-06-11T20:00:00.000Z",
+    "competitor_a": "Turkey",
+    "competitor_b": "Italy",
+    "group": "Group A",
+    "venue": "Stadio Olimpico, Rome"
+  },
+  {
+    "start": "2021-06-12T14:00:00.000Z",
+    "competitor_a": "Wales",
+    "competitor_b": "Switzerland",
+    "group": "Group A",
+    "venue": "Olympic Stadium, Baku"
+  },
+  {
+    "start": "2021-06-12T17:00:00.000Z",
+    "competitor_a": "Denmark",
+    "competitor_b": "Finland",
+    "group": "Group B",
+    "venue": "Parken Stadium, Copenhagen"
+  },
+  {
+    "start": "2021-06-12T20:00:00.000Z",
+    "competitor_a": "Belgium",
+    "competitor_b": "Russia",
+    "group": "Group B",
+    "venue": "Krestovsky Stadium, Saint Petersburg"
+  },
+  {
+    "start": "2021-06-13T17:00:00.000Z",
+    "competitor_a": "Austria",
+    "competitor_b": "North Macedonia",
+    "group": "Group C",
+    "venue": "Arena Națională, Bucharest"
+  },
+  {
+    "start": "2021-06-13T20:00:00.000Z",
+    "competitor_a": "Netherlands",
+    "competitor_b": "Ukraine",
+    "group": "Group C",
+    "venue": "Johan Cruyff Arena, Amsterdam"
+  },
+  {
+    "start": "2021-06-13T14:00:00.000Z",
+    "competitor_a": "England",
+    "competitor_b": "Croatia",
+    "group": "Group D",
+    "venue": "Wembley Stadium, London"
+  },
+  {
+    "start": "2021-06-14T14:00:00.000Z",
+    "competitor_a": "Scotland",
+    "competitor_b": "Czech Republic",
+    "group": "Group D",
+    "venue": "Hampden Park, Glasgow"
+  },
+  {
+    "start": "2021-06-14T17:00:00.000Z",
+    "competitor_a": "Poland",
+    "competitor_b": "Slovakia",
+    "group": "Group E",
+    "venue": "Aviva Stadium, Dublin"
+  },
+  {
+    "start": "2021-06-14T20:00:00.000Z",
+    "competitor_a": "Spain",
+    "competitor_b": "Sweden",
+    "group": "Group E",
+    "venue": "San Mamés, Bilbao"
+  },
+  {
+    "start": "2021-06-15T17:00:00.000Z",
+    "competitor_a": "Hungary",
+    "competitor_b": "Portugal",
+    "group": "Group F",
+    "venue": "Puskás Aréna, Budapest"
+  },
+  {
+    "start": "2021-06-15T20:00:00.000Z",
+    "competitor_a": "France",
+    "competitor_b": "Germany",
+    "group": "Group F",
+    "venue": "Allianz Arena, Munich"
+  },
+  {
+    "start": "2021-06-16T17:00:00.000Z",
+    "competitor_a": "Turkey",
+    "competitor_b": "Wales",
+    "group": "Group A",
+    "venue": "Olympic Stadium, Baku"
+  },
+  {
+    "start": "2021-06-16T20:00:00.000Z",
+    "competitor_a": "Italy",
+    "competitor_b": "Switzerland",
+    "group": "Group A",
+    "venue": "Stadio Olimpico, Rome"
+  },
+  {
+    "start": "2021-06-16T14:00:00.000Z",
+    "competitor_a": "Finland",
+    "competitor_b": "Russia",
+    "group": "Group B",
+    "venue": "Krestovsky Stadium, Saint Petersburg"
+  },
+  {
+    "start": "2021-06-17T17:00:00.000Z",
+    "competitor_a": "Denmark",
+    "competitor_b": "Belgium",
+    "group": "Group B",
+    "venue": "Parken Stadium, Copenhagen"
+  },
+  {
+    "start": "2021-06-17T14:00:00.000Z",
+    "competitor_a": "Ukraine",
+    "competitor_b": "North Macedonia",
+    "group": "Group C",
+    "venue": "Arena Națională, Bucharest"
+  },
+  {
+    "start": "2021-06-17T20:00:00.000Z",
+    "competitor_a": "Netherlands",
+    "competitor_b": "Austria",
+    "group": "Group C",
+    "venue": "Johan Cruyff Arena, Amsterdam"
+  },
+  {
+    "start": "2021-06-18T17:00:00.000Z",
+    "competitor_a": "Croatia",
+    "competitor_b": "Czech Republic",
+    "group": "Group D",
+    "venue": "Hampden Park, Glasgow"
+  },
+  {
+    "start": "2021-06-18T20:00:00.000Z",
+    "competitor_a": "England",
+    "competitor_b": "Scotland",
+    "group": "Group D",
+    "venue": "Wembley Stadium, London"
+  },
+  {
+    "start": "2021-06-18T14:00:00.000Z",
+    "competitor_a": "Sweden",
+    "competitor_b": "Slovakia",
+    "group": "Group E",
+    "venue": "Aviva Stadium, Dublin"
+  },
+  {
+    "start": "2021-06-19T20:00:00.000Z",
+    "competitor_a": "Spain",
+    "competitor_b": "Poland",
+    "group": "Group E",
+    "venue": "San Mamés, Bilbao"
+  },
+  {
+    "start": "2021-06-19T14:00:00.000Z",
+    "competitor_a": "Hungary",
+    "competitor_b": "France",
+    "group": "Group F",
+    "venue": "Allianz Arena, Munich"
+  },
+  {
+    "start": "2021-06-19T17:00:00.000Z",
+    "competitor_a": "Portugal",
+    "competitor_b": "Germany",
+    "group": "Group F",
+    "venue": "Puskás Aréna, Budapest"
+  },
+  {
+    "start": "2021-06-20T17:00:00.000Z",
+    "competitor_a": "Switzerland",
+    "competitor_b": "Turkey",
+    "group": "Group A",
+    "venue": "Olympic Stadium, Baku"
+  },
+  {
+    "start": "2021-06-20T17:00:00.000Z",
+    "competitor_a": "Italy",
+    "competitor_b": "Wales",
+    "group": "Group A",
+    "venue": "Stadio Olimpico, Rome"
+  },
+  {
+    "start": "2021-06-21T17:00:00.000Z",
+    "competitor_a": "North Macedonia",
+    "competitor_b": "Netherlands",
+    "group": "Group C",
+    "venue": "Johan Cruyff Arena, Amsterdam"
+  },
+  {
+    "start": "2021-06-21T20:00:00.000Z",
+    "competitor_a": "Russia",
+    "competitor_b": "Denmark",
+    "group": "Group B",
+    "venue": "Parken Stadium, Copenhagen"
+  },
+  {
+    "start": "2021-06-21T20:00:00.000Z",
+    "competitor_a": "Finland",
+    "competitor_b": "Belgium",
+    "group": "Group B",
+    "venue": "Krestovsky Stadium, Saint Petersburg"
+  },
+  {
+    "start": "2021-06-21T17:00:00.000Z",
+    "competitor_a": "Ukraine",
+    "competitor_b": "Austria",
+    "group": "Group C",
+    "venue": "Arena Națională, Bucharest"
+  },
+  {
+    "start": "2021-06-22T20:00:00.000Z",
+    "competitor_a": "Croatia",
+    "competitor_b": "Scotland",
+    "group": "Group D",
+    "venue": "Hampden Park, Glasgow"
+  },
+  {
+    "start": "2021-06-22T20:00:00.000Z",
+    "competitor_a": "Czech Republic",
+    "competitor_b": "England",
+    "group": "Group D",
+    "venue": "Wembley Stadium, London"
+  },
+  {
+    "start": "2021-06-23T17:00:00.000Z",
+    "competitor_a": "Sweden",
+    "competitor_b": "Poland",
+    "group": "Group E",
+    "venue": "Aviva Stadium, Dublin"
+  },
+  {
+    "start": "2021-06-23T17:00:00.000Z",
+    "competitor_a": "Slovakia",
+    "competitor_b": "Spain",
+    "group": "Group E",
+    "venue": "San Mamés, Bilbao"
+  },
+  {
+    "start": "2021-06-23T20:00:00.000Z",
+    "competitor_a": "Portugal",
+    "competitor_b": "France",
+    "group": "Group F",
+    "venue": "Puskás Aréna, Budapest"
+  },
+  {
+    "start": "2021-07-23T20:00:00.000Z",
+    "competitor_a": "Germany",
+    "competitor_b": "Hungary",
+    "group": "Group F",
+    "venue": "Allianz Arena, Munich"
+  }
+]

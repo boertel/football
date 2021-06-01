@@ -1,0 +1,650 @@
+[
+{
+  "model": "courier.email",
+  "pk": 1,
+  "fields": {
+    "created_at": "2020-07-01T20:11:40.174Z",
+    "updated_at": "2021-03-15T21:23:01.783Z",
+    "template_name": "invite",
+    "status": "archived",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Thank you for participating in our Rising Team pre-launch test!",
+    "preheader": "Here’s all the info you need to get started.",
+    "content": "Thank you for trying out a very early version of Rising Team! We’re inviting a small group of people to help us test some of the exercises that we plan to use in the product. Your feedback is valuable and will directly impact what we build. Here’s some quick context about what to expect:\r\n<br><br>\r\n<ul>\r\n<li><b>About Rising Team:</b> Our premise is simple: great managers are like great coaches. We’ve developed exercises—backed by research and road-tested with decades of management experience—that help managers learn how to lead like a coach. To learn more, visit <a href=\"https://risingteam.com\">https://risingteam.com</a>.</li>\r\n<li><b>About this test:</b> We are in development and looking for early feedback. Many parts of Rising Team are still under construction, so some of these pages have placeholder designs and may not behave like you expect. The primary goal of this test is to ask you to try the three exercises we’ve included and, afterwards, we’ll send you a survey asking for feedback. You don’t need to be a people manager to participate.</li>\r\n</ul>\r\n<br>\r\nTo get started, <a href=\"{{href}}\">click here</a> to create an account. Then, proceed to take the three exercises you’ll see listed. After you complete the exercises, please also click on the “Coach” tab to see what this will look like from a manager’s perspective. <b>Note: the product is not yet mobile-optimized, so we recommend using a laptop or desktop computer.</b>\r\n<br>\r\n<br>\r\nAs you take the exercises, pay attention to the process: it’s valuable for us to know any place you feel stuck or confused. In particular, we are interested in whether the results of the exercises feel true to who you are and whether the results are useful. If you do plan to use the Rising Team beta, you will create a new account for that, so nothing from this test will be stored.\r\n<br>\r\n<br>\r\nFrom all of us at Rising Team, thank you. We are grateful for your help and we are excited to have you with us for this first phase of the journey. Feel free to reach out to me anytime for help or with feedback at jen@risingteam.com.",
+    "cta_content": null,
+    "cta_href": null,
+    "signature": "Thanks,<br />Jennifer Dulski<br />Founder and CEO",
+    "subscription_group": null
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 2,
+  "fields": {
+    "created_at": "2020-07-01T20:39:39.792Z",
+    "updated_at": "2021-03-15T19:58:39.242Z",
+    "template_name": "appreciations",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "✏️ Take the Appreciations exercise on Rising Team",
+    "preheader": "Public recognition, shared experiences, cold hard cash… What makes you feel appreciated?",
+    "content": "<p><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Your manager, {{manager.first_name}}, has kicked off the Appreciations exercise for you to take on Rising Team. Whether it’s recognition from leadership, shared experiences, or cold hard cash, we all have different ways we like to be appreciated. This exercise illuminates how you most like to be appreciated by others.\r\n\r\nIt should take around 10 minutes to complete and will create a shared document for you and your manager to review together during your next 1:1. You can also choose to share it with the other people on your team.</span></font></p>",
+    "cta_content": "Take Appreciations Exercise",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 3,
+  "fields": {
+    "created_at": "2020-07-02T00:25:31.717Z",
+    "updated_at": "2021-03-15T19:58:39.181Z",
+    "template_name": "motivators",
+    "status": "archived",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Take the MOTIVATORS exercise on Rising Team",
+    "preheader": "Motivators are the things you care about to make you happy at work.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-494645e6-7fff-b18b-8c4d-3630dccbeade\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\">{{manager.first_name}} {{manager.last_name}} has kicked off the MOTIVATORS exercise for you to take on Rising Team. Your motivators are the things you care about to make you happy at work. This exercise will highlight the factors that matter most to you, so your manager knows. No wrong answers!</span></p><p><br></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\">The exercise should take around 10 minutes to complete and will create a shared document for you and your manager to review together during your next 1:1.</span></p>",
+    "cta_content": "Take MOTIVATORS Exercise",
+    "cta_href": "/?survey=motivators",
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 4,
+  "fields": {
+    "created_at": "2020-07-02T00:38:47.612Z",
+    "updated_at": "2021-03-15T19:58:39.140Z",
+    "template_name": "user-manual",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "✏️ Take the User Manual exercise on Rising Team",
+    "preheader": "If you were an appliance, what should we know about how you operate?",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-b1eb9c79-7fff-dc12-223c-b5eb1e35c329\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">Your manager, {{manager.first_name}}, has kicked off the User Manual exercise for you to take on Rising Team. Your User Manual is a way to help your manager and colleagues learn how best to work with you. If you were an appliance, what should we know about how you operate?\r\n\r\nThe exercise should take around 20 minutes to complete. Everyone on your team will see your User Manual and, after others complete it, you’ll see theirs too.\r\n</span></font></p>",
+    "cta_content": "Take User Manual Exercise",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 5,
+  "fields": {
+    "created_at": "2020-07-02T00:56:36.662Z",
+    "updated_at": "2021-03-15T19:58:39.109Z",
+    "template_name": "talents-completed",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "{{member.first_name}} {{member.last_name}} has completed the Talents exercise",
+    "preheader": "Review their results now.",
+    "content": "<p><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">Hi from Rising Team!\r\n\r\nJust a quick note to let you know that {{member.first_name}} {{member.last_name}} has completed the Talents exercise. \r\n\r\nYou’ll see this as part of your next 1:1 document, but if you’d like to review now, visit your Team tab on Rising Team where you’ll find individual profiles for everyone on your team.\r\n</span></font></p>",
+    "cta_content": "Go to Team Tab",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 6,
+  "fields": {
+    "created_at": "2020-07-02T00:59:09.243Z",
+    "updated_at": "2021-03-15T19:58:39.078Z",
+    "template_name": "appreciations-completed",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "{{member.first_name}} {{member.last_name}} has completed the Appreciations exercise",
+    "preheader": "Review their results now.",
+    "content": "<span style=\"font-family: Roboto, sans-serif; font-size: 14.6667px; white-space: pre-wrap;\">Hi from Rising Team!\r\n\r\nJust a quick note to let you know that {{member.first_name}} {{member.last_name}} has completed the Appreciations exercise. \r\n\r\nYou’ll see this as part of your next 1:1 document, but if you’d like to review now, visit your Team tab on Rising Team where you’ll find individual profiles for everyone on your team.</span><br>",
+    "cta_content": "Go to Team Tab",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 7,
+  "fields": {
+    "created_at": "2020-07-02T01:00:54.998Z",
+    "updated_at": "2021-03-15T19:58:39.043Z",
+    "template_name": "motivators-completed",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "{{member.first_name}} {{member.last_name}} has completed the Motivators exercise",
+    "preheader": "Review their results now.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-28b76f76-7fff-21b7-52a5-12e8733aea9e\"><span style=\"font-family: Roboto, sans-serif; font-size: 14.6667px; white-space: pre-wrap;\">Hi from Rising Team!\r\n\r\nJust a quick note to let you know that {{member.first_name}} {{member.last_name}} has completed the Motivators exercise. \r\n\r\nYou’ll see this as part of your next 1:1 document, but if you’d like to review now, visit your Team tab on Rising Team where you’ll find individual profiles for everyone on your team.</span><br></p>",
+    "cta_content": "Go to Team Tab",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 8,
+  "fields": {
+    "created_at": "2020-07-02T01:01:53.404Z",
+    "updated_at": "2021-03-15T19:58:39.007Z",
+    "template_name": "user-manual-completed",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "{{member.first_name}} {{member.last_name}} has completed the User Manual exercise",
+    "preheader": "Review their results now.",
+    "content": "<span style=\"font-family: Roboto, sans-serif; font-size: 14.6667px; white-space: pre-wrap;\">Hi from Rising Team!\r\n\r\nJust a quick note to let you know that {{member.first_name}} {{member.last_name}} has completed the User Manual exercise. \r\n\r\nYou’ll see this as part of your next 1:1 document, but if you’d like to review now, visit your Team tab on Rising Team where you’ll find individual profiles for everyone on your team.</span><br>",
+    "cta_content": "Go to Team Tab",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 9,
+  "fields": {
+    "created_at": "2020-07-02T01:04:00.656Z",
+    "updated_at": "2021-03-15T21:22:47.368Z",
+    "template_name": "welcome-manager",
+    "status": "active",
+    "from_email": "Jen at Rising Team <jen@risingteam.com>",
+    "subject": "Welcome to Rising Team!",
+    "preheader": "Get started today.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-afb079aa-7fff-471f-a0f6-d8ef1f473b56\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">Hi {{member.first_name}},\r\n\r\nI’m Jen, the founder of Rising Team. I’m so happy you signed up for our beta!\r\n\r\nTo get started, <a href=\"{{ root_href }}/playbook\" target=\"_blank\">we recommend jumping into our Playbook</a>: a set of bite-sized tutorials that make it easy for you to learn the Rising Team system and ignite the full potential of your team. The Playbook will help you integrate our tools into your day-to-day routine.\r\n\r\nAdditionally, be sure to to <a href=\"{{ root_href }}/slack/invite\" target=\"_blank\">join our private Slack community called The Huddle</a>. It’s a safe space for ideas, advice, and support on your journey as a manager that we facilitate for you and other managers using Rising Team.</span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-afb079aa-7fff-471f-a0f6-d8ef1f473b56\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\"><br></span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-afb079aa-7fff-471f-a0f6-d8ef1f473b56\"><img style=\"width: 311px;\" src=\"https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/aa2b2732-4126-4cc8-b8c6-69270a21ca15.gif?ClientID=vimeo-core-prod&amp;Date=1614021783&amp;Signature=f8c444b6ca3bf44c63b6c76962c62a252f7d0022\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">\r\n\r\nWe’re still in beta and we appreciate any and all feedback; just reply here or email us at hello@risingteam.com anytime!<br></span></font></p>",
+    "cta_content": null,
+    "cta_href": null,
+    "signature": "Thanks,<br />Jennifer Dulski<br />Founder and CEO",
+    "subscription_group": null
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 10,
+  "fields": {
+    "created_at": "2020-07-02T01:13:30.892Z",
+    "updated_at": "2021-03-15T21:22:33.649Z",
+    "template_name": "welcome-individual_contributor",
+    "status": "active",
+    "from_email": "Jen at Rising Team <jen@risingteam.com>",
+    "subject": "Welcome to Rising Team!",
+    "preheader": "Get started today.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Hi {{member.first_name}},\r\n\r\nI’m Jen, the founder of Rising Team. Thanks for signing up! </span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\"><br></span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Rising Team makes it easy for your manager, {{manager.first_name}}, to provide consistent support and coaching on your professional development. A small investment from you in using these tools will help make that happen.</span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><br></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><b><span style=\"font-size: 18px;\">What to expect:</span></b><span style=\"font-size: 18px;\">﻿</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><br></p><ul><li style=\"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\"><b>A series of short, reflective exercises about your work life that each take less than 10 minutes to do:</b> These are designed to start a discussion with your manager about the things that matter most to your happiness at work. You’ll get an email when your manager is ready for you to take the first one!</span></font></li><li style=\"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;\"><b>An interactive template for your 1-on-1 meetings that both you and your manager fill out ahead of time:</b> Make 1:1s better than just a basic routine check-in by taking 10 minutes beforehand to fill out our painless template with work, life, and career prompts. You’ll get an email with a link to your first 1:1 meeting template when your manager sets it up in our system.</li></ul><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\"><br></span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Work is a team sport, and we designed the Rising Team system to help everyone to feel more engaged, more supported, and more connected to their team at work. To that end, a great first step is to <a href=\"{{ cta_href }}\" target=\"_blank\">take our anonymous survey</a> to record how you feel today on your team and working with your manager—so you can see how it changes over time.</span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\"><br></span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">We’re still in beta and we appreciate any and all feedback; just reply here or email us at hello@risingteam.com anytime!</span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\"><br></span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\"><img style=\"width: 311px;\" src=\"https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/aa2b2732-4126-4cc8-b8c6-69270a21ca15.gif?ClientID=vimeo-core-prod&amp;Date=1614021783&amp;Signature=f8c444b6ca3bf44c63b6c76962c62a252f7d0022\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\"><br></span></font></p>",
+    "cta_content": "Take Survey",
+    "cta_href": null,
+    "signature": "Thanks,<br />Jennifer Dulski<br />Founder and CEO",
+    "subscription_group": null
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 11,
+  "fields": {
+    "created_at": "2020-07-02T01:16:38.880Z",
+    "updated_at": "2021-03-15T21:22:09.550Z",
+    "template_name": "password-reset",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Reset your password",
+    "preheader": "Create a new password for your Rising Team account.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Hi from Rising Team!</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-f938a267-7fff-5f7e-8a15-325b8c518d0a\"><b style=\"font-weight:normal;\" id=\"docs-internal-guid-af8c8c5d-7fff-d4b6-c0ec-f6f58bfc3c94\"><br></b></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Forgot your password? Use the button below to create a new one.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><br></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">You can also reply to this email if you need further assistance.</span></p>",
+    "cta_content": "Reset Your Password",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": null
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 12,
+  "fields": {
+    "created_at": "2020-07-02T18:44:02.065Z",
+    "updated_at": "2021-03-15T19:58:38.917Z",
+    "template_name": "user-manual-all_completed",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Bring the team together to discuss your User Manuals",
+    "preheader": "Share, reflect, and build deeper relationships as a group.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Good news! Everyone on your team has submitted their User Manual exercise. As a next step, schedule a team meeting for everyone to share their own personal User Manuals to get to know each other better.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-accbf684-7fff-4e44-f2f6-0cae84da396c\"><b style=\"font-weight:normal;\" id=\"docs-internal-guid-82a9ee2b-7fff-ce69-f967-e2b87d055b3c\"><br></b></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">The best coaches turn their teams into a cohesive unit by building authentic relationships between team members. Hosting a meeting (even a virtual one) for your team to share their User Manuals is a great opportunity to build community within your team.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><b style=\"font-weight:normal;\"><br></b></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Here’s how:</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><b style=\"font-weight:normal;\"><br></b></p><ul style=\"margin-top:0;margin-bottom:0;padding-inline-start:48px;\"><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Schedule a meeting with everyone on your team. While in-person is great when possible, virtual meetings work well too.</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Make it a safe space by sharing a few ground rules around confidentiality, no tech distractions, and a time limit per person. Tip: Use a timer on your phone to stay on track.</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Invite each person to share their User Manuals, primarily focused on the open-ended questions. Encourage people to be as open and vulnerable as possible. Make sure you, as the manager, go first to serve as a role model.</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Leave time at the end for the team to reflect as a group on the exercise and anything new they learned about themselves or a teammate.</span></p></li></ul><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><br></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Good luck and have fun!</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-accbf684-7fff-4e44-f2f6-0cae84da396c\"><br></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-accbf684-7fff-4e44-f2f6-0cae84da396c\"><span id=\"docs-internal-guid-9775c491-7fff-03aa-0b7e-5042d6a3b0fc\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\">PS: Reply to this email to let us know what you think of the User Manual exercise after you’ve met!</span></span></p>",
+    "cta_content": null,
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 13,
+  "fields": {
+    "created_at": "2020-07-16T02:35:08.557Z",
+    "updated_at": "2021-03-22T21:00:49.081Z",
+    "template_name": "invite-manager",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "You're invited to join the Rising Team beta",
+    "preheader": "Work is a team sport.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-f52203aa-7fff-d19f-bcb6-fbe0667510fe\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">Welcome to the Rising Team private beta! We’ve had a lot of interest and are pleased to confirm early access for you and your team.&nbsp;</span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-f52203aa-7fff-d19f-bcb6-fbe0667510fe\"><br></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-f52203aa-7fff-d19f-bcb6-fbe0667510fe\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">The Rising Team platform and tools are designed to help you excel as a manager and ignite the full potential of your team. Our beta includes fun exercises and a 1-on-1 meeting template that make it easy to better understand and support the people you manage. To get started, </span></font><a href=\"{{ cta_href }}\" target=\"_blank\">click here</a><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\"> to create an account.</span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-f52203aa-7fff-d19f-bcb6-fbe0667510fe\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\"><br></span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-f52203aa-7fff-d19f-bcb6-fbe0667510fe\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">We’re glad to have you on this journey with us!</span></font></p>",
+    "cta_content": "Get Started",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": null
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 15,
+  "fields": {
+    "created_at": "2020-07-16T03:13:46.970Z",
+    "updated_at": "2021-03-15T21:21:34.707Z",
+    "template_name": "invite-individual_contributor",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Invite to join Rising Team from {{manager.first_name}} {{manager.last_name}}",
+    "preheader": "Sign up for a free account.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-2cd969e6-7fff-7e70-1291-1baffa69f5a7\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">{{manager.first_name}} {{manager.last_name}} has signed up for early access to the Rising Team beta and invited you to join. <a href=\"{{ cta_href }}\" target=\"_blank\">Click here</a> to get started and create your profile.</span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-2cd969e6-7fff-7e70-1291-1baffa69f5a7\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\"><br></span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-2cd969e6-7fff-7e70-1291-1baffa69f5a7\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">Rising Team is a new platform designed to help your manager better support you and your career. It takes just a small time commitment from you each week—10 to 15 minutes—to have a big impact.</span></font><br></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-2cd969e6-7fff-7e70-1291-1baffa69f5a7\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\"><br></span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-2cd969e6-7fff-7e70-1291-1baffa69f5a7\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">We’re glad to have you on this journey with us!</span></font></p>",
+    "cta_content": "Get Started",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": null
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 16,
+  "fields": {
+    "created_at": "2020-07-16T03:28:29.375Z",
+    "updated_at": "2021-03-15T19:58:38.834Z",
+    "template_name": "first-1-1-manager",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Say hello to your new 1-on-1 template",
+    "preheader": "It's easy to use and makes 1:1s a snap.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" id=\"docs-internal-guid-9e070847-7fff-a9b8-329d-f08613a4c7f0\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">Transform your 1:1s with the Rising Team template. </span></font><span style=\"background-color: transparent; font-family: Roboto, sans-serif; font-size: 11pt; white-space: pre-wrap;\">It offers a system to keep you consistent in the support you provide to the individuals on your team. Using our template will help you have authentic coaching conversations and cover all the areas that research shows are important to great management.</span></p><span id=\"docs-internal-guid-5816ce89-7fff-adad-4f2a-019666cdfdbb\"><br><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\">To get started, visit your Rising Team homepage to see a dashboard of your team. From there, set the dates for your next 1:1 with each person to sync them in our system.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Prep before your meeting</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">We send you an email the day before your 1:1 to fill out the meeting template. This takes less than 10 minutes of your time to do.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><b style=\"font-weight:normal;\" id=\"docs-internal-guid-ad2ae46d-7fff-f583-948c-c37aa4308403\"><br></b></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Look for the yellow boxes</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">You and your team member share access to the meeting template and have your own sections to fill out ahead of time. Yours are marked in yellow and will have an icon with your first initial.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><b style=\"font-weight:normal;\"><br></b></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Use it as your meeting agenda</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Open the 1:1 template during your meeting to read what your team member wrote, and treat it as your agenda. You can review all the sections in order in each meeting, or just focus on certain ones.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><br><span style=\"font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;\">PS: To learn how to use our 1:1 tool with your team, </span><span style=\"font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline;\"><a href=\"{{ root_href }}/playbook/unit-3\" target=\"_blank\">visit Unit 3 of the Rising Team Playbook</a></span><span style=\"font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;\">.</span><br></span></p></span>",
+    "cta_content": "Sync Your 1:1 Dates",
+    "cta_href": "/",
+    "signature": "",
+    "subscription_group": "23392"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 17,
+  "fields": {
+    "created_at": "2020-07-24T19:25:21.581Z",
+    "updated_at": "2021-03-15T19:58:38.798Z",
+    "template_name": "skipped-onboarding-manager",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Better teamwork awaits you",
+    "preheader": "Complete your profile to get started.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Thanks for creating your account on Rising Team! </span><a href=\"{{ cta_href }}\" target=\"_blank\">Complete your profile</a><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">&nbsp;and get started with our playbook.</span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Your feedback at this early stage is invaluable to us so, if there’s a reason why you dropped off, could you please reply to this email to let me know?</span></p>",
+    "cta_content": "Complete Your Sign Up",
+    "cta_href": null,
+    "signature": "Thanks,<br />Jennifer Dulski<br />Founder and CEO",
+    "subscription_group": "21870"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 18,
+  "fields": {
+    "created_at": "2020-07-24T19:39:30.553Z",
+    "updated_at": "2021-03-15T19:58:38.733Z",
+    "template_name": "skipped-onboarding-individual_contributor",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Your team is using Rising Team",
+    "preheader": "Complete your profile to get started.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Thanks for creating your account on Rising Team! </span><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">Help your manager better support you by logging in to complete your profile.</span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">You can also reply to this email with any technical issues or questions.</span></p>",
+    "cta_content": "Complete Your Sign Up",
+    "cta_href": null,
+    "signature": "Thanks,<br />Rising Team HQ",
+    "subscription_group": "21870"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 19,
+  "fields": {
+    "created_at": "2020-07-24T19:41:13.768Z",
+    "updated_at": "2021-04-06T17:09:38.738Z",
+    "template_name": "survey-manager",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "🧡 Monthly manager health survey",
+    "preheader": "How are things going?",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">Hi {{manager.first_name}},\r\n</span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\"><br></span></font></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">It’s been a month since we last asked about how things are feeling for you as a manager. We send you this survey monthly so you can track how your answers change over time </span></font><span style=\"font-family: Roboto, sans-serif; white-space: pre-wrap;\">on your Rising Team profile</span><span style=\"font-size: 14.6667px; white-space: pre-wrap; font-family: Roboto, sans-serif;\">—and so you can see whether Rising Team is making a positive impact.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">\r\nIt’s just two minutes, 12 questions long.\r\n\r\nYour team members also take a monthly survey as part of Rising Team. For teams with at least three people, those average results will be viewable in the team overview section of your Team tab under Team Health.\r\n</span>\r\n</font></p>",
+    "cta_content": "Take Survey",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23277"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 20,
+  "fields": {
+    "created_at": "2020-07-24T19:45:13.509Z",
+    "updated_at": "2021-03-15T19:58:38.505Z",
+    "template_name": "reminder-to-take-exercise",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "⏰ Reminder: New exercise on Rising Team",
+    "preheader": "Visit Rising Team to complete the new exercise.",
+    "content": "<p><font face=\"Roboto, sans-serif\"><span style=\"font-size: 14.6667px; white-space: pre-wrap;\">Your manager, {{manager.first_name}}, kicked off a new exercise for you and your teammates to complete on Rising Team. Complete the exercise, which should only take around 10 minutes to do, and then plan to discuss it with your manager in your next 1:1.</span></font></p>",
+    "cta_content": "Complete Exercise",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 21,
+  "fields": {
+    "created_at": "2020-07-24T19:52:57.973Z",
+    "updated_at": "2021-03-15T21:21:15.666Z",
+    "template_name": "nudge-manager-start-exercise",
+    "status": "archived",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "It’s been a while since your last team exercise",
+    "preheader": "See what’s next on Rising Team and learn to manage like a coach!",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">It’s been a while since your last team exercise. Visit Rising Team to find out what exercises come next for you and your team.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Each exercise gives you a new opportunity to understand more about your team members and manage like a coach.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">I’m eager to learn about your experience using Rising Team so far. If you have a minute to spare, please hit reply on this email to share your thoughts!</span></p>",
+    "cta_content": "See What’s Next",
+    "cta_href": null,
+    "signature": "Thanks,<br />Jennifer Dulski<br />Founder and CEO",
+    "subscription_group": null
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 22,
+  "fields": {
+    "created_at": "2020-07-24T19:54:06.074Z",
+    "updated_at": "2021-03-16T03:50:33.499Z",
+    "template_name": "nudge-manager-send-to-team",
+    "status": "archived",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "➡️ Important! Invite your team to take exercise",
+    "preheader": "Their results are automatically shared with you.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">You recently completed an exercise on Rising Team. Next, invite everyone on your team to take it too.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">As your team members complete the exercise, their results are automatically shared with you. Plus, you’ll get a composite view of the exercise results across your team so you can identify areas of overlap in how people respond to the questions.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><br></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Not sure how to use this exercise with your team?</span><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"> </span><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"><a href=\"{{ root_href }}/playbook\" target=\"_blank\">Visit the Rising Team Playbook</a></span><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"> to:</span></p><p></p><ul style=\"margin-top:0;margin-bottom:0;padding-inline-start:48px;\"><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Learn how to interpret exercise results—both per person and for your team overall</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Get tips for how to talk about results with individual team members</span></p></li></ul>",
+    "cta_content": "Send to Team",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 23,
+  "fields": {
+    "created_at": "2020-07-24T19:58:30.309Z",
+    "updated_at": "2021-03-15T19:58:38.347Z",
+    "template_name": "first-1-1-individual_contributor",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Say hello to your new 1-on-1 template",
+    "preheader": "It’s easy to use and makes your 1:1s a snap.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">A 1:1 is the primary time you have to get support from your manager, so make the most of it the Rising Team 1:1 template. All it takes is a few minutes of prep time from you, and our template structure makes it easy to consistently get the support you need from your manager.</span></p><p dir=\"ltr\" id=\"docs-internal-guid-9e070847-7fff-a9b8-329d-f08613a4c7f0\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><span id=\"docs-internal-guid-a2f4421d-7fff-96ed-dec0-08ebdb242be8\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Your manager, {{manager.first_name}}, scheduled an upcoming 1:1 in our system on {{due_date|date:\"l, F j\"}}.</span></p><p dir=\"ltr\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Prep before your meeting</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">We send you an email the day before your 1:1 to fill out the meeting template. This takes less than 10 minutes of your time to do.</span></p><p dir=\"ltr\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><b style=\"font-weight:normal;\" id=\"docs-internal-guid-31de9594-7fff-c2bd-0054-c3ea4ef5b574\"><br></b></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Look for the yellow boxes</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">You and your manager share access to the meeting template and have your own sections to fill out ahead of time. Yours are marked in yellow and will have an icon with your first initial.</span></p><p dir=\"ltr\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><b style=\"font-weight:normal;\"><br></b></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Use it as your meeting agenda</span></p><p dir=\"ltr\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Open the 1:1 template during your meeting to read what your manager wrote, and treat it as your agenda. You can review all the sections in order in each meeting, or just focus on certain ones.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"><span id=\"docs-internal-guid-f360ea78-7fff-a355-88d0-8a83f4b72289\"><span style=\"font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;\">For a full walkthrough, </span><a href=\"https://beta.risingteam.com/article/38\"><span style=\"font-size: 11pt; color: rgb(17, 85, 204); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: underline; text-decoration-skip-ink: none; vertical-align: baseline;\">visit our step-by-step guide</span></a><span style=\"font-size: 11pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;\">.</span></span><br></span></p>",
+    "cta_content": "Prep For Your 1:1",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23392"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 24,
+  "fields": {
+    "created_at": "2020-07-24T20:00:47.331Z",
+    "updated_at": "2021-03-15T19:58:38.313Z",
+    "template_name": "1-1-prep-individual_contributor",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Prep for your 1:1 with {{manager.first_name}} {{manager.last_name}}",
+    "preheader": "Capture your thoughts ahead of time in our pre-meeting questionnaire.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Your 1:1 with {{manager.first_name}} {{manager.last_name}} is scheduled for<span style=\"font-size: 14.6667px;\"> </span><span style=\"font-size: 14.6667px;\">{{due_date|date:\"l, F j\"}}</span>.</span></p><p><b style=\"font-weight:normal;\" id=\"docs-internal-guid-aae17472-7fff-7cd4-a606-4888b1cba568\"><br></b></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Fill out your portions of our questionnaire (look for the yellow boxes!) before the meeting to make the most of your 1:1 time:</span></p><p></p><ul style=\"margin-top:0;margin-bottom:0;padding-inline-start:48px;\"><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Progress on your goals or action items since you last met</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Anything happening at work or outside of work that’s on your mind</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Examples of how your manager is supporting you or could do better in providing support</span></p></li></ul>",
+    "cta_content": "Prep For Your 1:1",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23392"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 25,
+  "fields": {
+    "created_at": "2020-07-24T20:01:57.725Z",
+    "updated_at": "2021-03-15T19:58:38.264Z",
+    "template_name": "1-1-prep-manager",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Prep for your 1:1 with {{member.first_name}} {{member.last_name}}",
+    "preheader": "Capture your thoughts ahead of time in our pre-meeting questionnaire.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Your 1:1 with {{member.name}} is scheduled for <span style=\"font-size: 14.6667px;\">{{due_date|date:\"l, F j\"}}.</span></span></p><p><b style=\"font-weight:normal;\" id=\"docs-internal-guid-d482fa8b-7fff-c277-6d29-62e86a4f2831\"><br></b></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Fill out your portions of our questionnaire (look for the yellow boxes!) before the meeting to make things easy:</span></p><p></p><ul style=\"margin-top:0;margin-bottom:0;padding-inline-start:48px;\"><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Any real-time guidance since your last 1:1 that you want to recognize or coach</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Key topics outside of the regular 1:1 template</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Information sharing you want to cascade through your team</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Any progress on your action items</span></p></li></ul>",
+    "cta_content": "Prep For Your 1:1",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23392"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 26,
+  "fields": {
+    "created_at": "2020-07-24T20:03:57.006Z",
+    "updated_at": "2021-03-15T21:20:58.679Z",
+    "template_name": "confirm-next-1-1",
+    "status": "archived",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "When is your next 1-on-1 with {{member.first_name}} {{member.last_name}}?",
+    "preheader": "Add it on Rising Team so we can help you prepare.",
+    "content": "<p>Looks like we’re missing the date of your next 1:1 with {{member.first_name}} {{member.last_name}}. Enter it now on Rising Team so we can send a reminder to you and {{member.first_name}} ahead of time with our meeting template.<br></p>",
+    "cta_content": "Confirm Next 1:1",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": null
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 27,
+  "fields": {
+    "created_at": "2020-07-28T21:06:21.161Z",
+    "updated_at": "2021-03-15T21:20:40.282Z",
+    "template_name": "resend-invite",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com>",
+    "subject": "Saying 👋🏼  and bumping your Rising Team invite",
+    "preheader": "Sign up today.",
+    "content": "<div><span style=\"background-color: transparent; font-family: Roboto, sans-serif; font-size: 11pt; white-space: pre-wrap;\">Hi there!</span><br></div><span id=\"docs-internal-guid-35408b91-7fff-cc5d-2e1f-1e07641eccae\"><br><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\">We sent you an invite to join the Rising Team private beta but you haven’t signed up yet. If you’re having any questions or technical issues, just hit reply on this email and we’ll help get it sorted.</span></p><br><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\">Thank you for being part of the Rising Team beta.</span></p><div><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><br></span></div></span>",
+    "cta_content": "Sign Up",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": null
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 28,
+  "fields": {
+    "created_at": "2020-09-22T23:55:43.294Z",
+    "updated_at": "2021-04-06T17:09:22.434Z",
+    "template_name": "survey-individual_contributor",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com> (default)",
+    "subject": "🧡 Monthly team health survey",
+    "preheader": "How are things going?",
+    "content": "<p dir=\"ltr\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Hi {{member.first_name}},\r\n\r\nIt’s been a month since we last asked about how things are feeling on your team and working with your manager, {{manager.first_name}}.\r\n\r\nWe send you this survey monthly so you can track how your answers change over time </span></font><span style=\"font-family: Roboto, sans-serif; white-space: pre-wrap;\">on your Rising Team profile</span><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">—and so your manager can get feedback on how they are doing as a coach for you.\r\n\r\nIt’s just two minutes, 12 questions long.\r\n</span>\r\n</font></p>",
+    "cta_content": "Take Survey",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23277"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 29,
+  "fields": {
+    "created_at": "2020-09-22T23:58:16.651Z",
+    "updated_at": "2021-04-06T17:09:10.060Z",
+    "template_name": "missing-survey-individual_contributor",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com> (default)",
+    "subject": "🧡 Monthly team health survey",
+    "preheader": "How are things going?",
+    "content": "<p dir=\"ltr\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Hi {{member.first_name}},\r\n\r\nPlease take our quick survey about how you feel today on your team and working with your manager, {{manager.first_name}}.\r\n\r\nWe send you this team health survey monthly so you can track how your answers change over time on your Rising Team profile—and so your manager can get feedback on how they are doing as a coach for you.\r\n\r\nYou might be wondering who can see what you say here. For teams with at least three people, your manager will see an average of the team’s responses to protect anonymity. For teams with fewer than three people, results will not be shared with your manager.\r\n</span>\r\n</font></p>",
+    "cta_content": "Take Survey",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23277"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 30,
+  "fields": {
+    "created_at": "2020-09-22T23:59:04.905Z",
+    "updated_at": "2021-03-15T19:58:38.093Z",
+    "template_name": "missing-survey-manager",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com> (default)",
+    "subject": "⏰ Reminder! Manager health survey",
+    "preheader": "How are things going?",
+    "content": "<p dir=\"ltr\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Hi {{member.first_name}},</span></font></p><p dir=\"ltr\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\"><br></span></font></p><p dir=\"ltr\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Please take our quick manager health survey! We send you this survey monthly so you can track how your answers change through time—and so you can see whether Rising Team is making a positive impact.\r\n\r\nYour team members also take a monthly team health survey as part of Rising Team. For teams with at least three people, those average results will be viewable in the team overview section of your Team tab under Team Health.\r\n</span></font></p>",
+    "cta_content": "Take Survey",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23277"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 31,
+  "fields": {
+    "created_at": "2020-12-16T19:40:27.612Z",
+    "updated_at": "2021-03-15T19:58:38.068Z",
+    "template_name": "action-items-reminder",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com> (default)",
+    "subject": "✔️ Reminder: You have an action item due tomorrow",
+    "preheader": "Mark as complete or update it today.",
+    "content": "<p>You have at least one action item due tomorrow that was assigned to you for follow-up during a recent 1:1 meeting:</p>\r\n\r\n<ul>\r\n{% for task in tasks %}<li><a href=\"{{root_href}}{{ task.href }}\">{{task.primary}}</a></li>{% endfor %}\r\n</ul>\r\n\r\n<p>Visit Rising Team to mark it complete or update it with the latest information.</p>",
+    "cta_content": null,
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "22926"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 35,
+  "fields": {
+    "created_at": "2021-02-12T03:06:27.425Z",
+    "updated_at": "2021-03-15T19:58:38.035Z",
+    "template_name": "shared-results",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com> (default)",
+    "subject": "✍️ {{person.first_name}} {{person.last_name}} has shared the {{exercise_name}} exercise on Rising Team with you",
+    "preheader": "Connect with your team in new ways.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Part of Rising Team is getting to know your team members in new ways and on a deeper level. </span><span style=\"background-color: transparent; font-family: Roboto, sans-serif; font-size: 11pt; white-space: pre-wrap;\">That’s why we give everyone the option to share Rising Team exercise results with their full team.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span id=\"docs-internal-guid-21b8d988-7fff-9070-eae7-2012f0baedbb\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">{{person.name}} has shared results to the {{exercise_name}} exercise. Visit Rising Team today to check it out and connect with {{person.first_name}} about it afterwards.</span></p>",
+    "cta_content": "View Exercise Results",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 36,
+  "fields": {
+    "created_at": "2021-02-16T06:05:51.388Z",
+    "updated_at": "2021-03-15T19:58:38.012Z",
+    "template_name": "talents",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com> (default)",
+    "subject": "✏️ Take The Talents exercise on Rising Team",
+    "preheader": "It’s our version of a team drill!",
+    "content": "<p><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Your manager, {{manager.first_name}}, has kicked off the Talents exercise for your team to take on Rising Team. It’s designed to identify the things that come naturally to you and that you enjoy doing most at work, so your manager can help you get to do more of the work you enjoy.\r\n\r\nThis exercise should take around 15 minutes to complete and will create a shared document for you and your manager to review together during your 1:1. You can also choose to share it with the other people on your team.\r\n</span></font></p>",
+    "cta_content": "Take Talents Exercise",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 37,
+  "fields": {
+    "created_at": "2021-02-16T06:31:02.810Z",
+    "updated_at": "2021-03-15T19:58:37.966Z",
+    "template_name": "nudge-manager-units",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com> (default)",
+    "subject": "🏆 Keep going with the playbook!",
+    "preheader": "You got this!",
+    "content": "<p><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Hi {{manager.first_name}},\r\n\r\nWe noticed you haven’t visited the Rising Team Playbook in a while. \r\n\r\nEach unit is designed to make it easy for you to learn the Rising Team system and integrate our tools into your day-to-day routine. Take the next step today and let the Playbook guide your way to ignite the full potential of your team!\r\n\r\nYour feedback at this early stage is invaluable to us so, if there’s a reason why you dropped off, could you please reply to this email to let me know?\r\n</span></font></p>",
+    "cta_content": "Next Unit",
+    "cta_href": null,
+    "signature": "Thanks<br />Jennifer Dulski<br />Founder and CEO",
+    "subscription_group": "21870"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 38,
+  "fields": {
+    "created_at": "2021-02-16T06:39:47.352Z",
+    "updated_at": "2021-03-15T19:58:37.922Z",
+    "template_name": "retake-exercise-upcoming",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com> (default)",
+    "subject": "🎯 It’s time to retake your {{X}} exercise",
+    "preheader": "Have your answers changed?",
+    "content": "<p dir=\"ltr\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Hi there!\r\n\r\nA while back you took the {{X}} exercise on Rising Team and set a reminder to re-take it on {{date}}. It’s good to check in periodically on how things might have changed for both you and your team members since you last took it.\r\n\r\nFind a few minutes to retake the exercise yourself. Your team will be automatically notified on {{date}} to retake it, as well. Then, plan to discuss what’s changed since last time in your 1-on-1s.\r\n\r\nPS: If you need a refresher on how to discuss these results with your team, visit the Rising Team Playbook to get advice.\r\n<br></span></font></p><div><br></div>",
+    "cta_content": "Take Exercise",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 39,
+  "fields": {
+    "created_at": "2021-02-16T06:48:19.808Z",
+    "updated_at": "2021-03-15T19:58:37.897Z",
+    "template_name": "retake-exercise",
+    "status": "active",
+    "from_email": "Rising Team <hello@risingteam.com> (default)",
+    "subject": "🎯 It’s time to retake your {{X}} exercise",
+    "preheader": "Have your answers changed?",
+    "content": "<p dir=\"ltr\" id=\"docs-internal-guid-a1404cae-7fff-c84d-5bac-32d263394a7f\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><font face=\"Roboto, sans-serif\"><span style=\"white-space: pre-wrap;\">Your manager, {{manager.first_name}}, has invited you and your teammates to retake the {{X}} exercise on Rising Team. You completed this exercise previously, but it’s good to check in periodically on how things might have changed since then. \r\n\r\nThink your answers have changed? Find out by retaking the exercise! Then, plan to discuss it in your next 1-on-1 with {{manager.first_name}}.\r\n</span>\r\n</font></p>",
+    "cta_content": "Take Exercise",
+    "cta_href": null,
+    "signature": "",
+    "subscription_group": "23472"
+  }
+},
+{
+  "model": "courier.email",
+  "pk": 40,
+  "fields": {
+    "created_at": "2021-02-23T03:03:37.997Z",
+    "updated_at": "2021-03-15T19:59:13.617Z",
+    "template_name": "launch-email-B-did-not-sign-up",
+    "status": "active",
+    "from_email": "Jen at Rising Team <jen@risingteam.com>",
+    "subject": "👋 Still interested in Rising Team? See our all-new site!",
+    "preheader": "Get started today.",
+    "content": "<p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Hi,</span></p><p dir=\"ltr\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">With people working remotely and navigating new business challenges, it’s now more important than ever to connect with your team on a deeper level.</span></p><p dir=\"ltr\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Today we are excited to announce a new and improved product—inspired by feedback from our early users. With this all-new version, </span><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">now is a great time to try Rising Team by joining our free, private beta.</span></p><p dir=\"ltr\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:13.999999999999998pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">What’s new on Rising Team</span></p><p dir=\"ltr\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><br></span></p><ul style=\"margin-top:0;margin-bottom:0;padding-inline-start:48px;\"><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">Introducing </span><a href=\"{{ root_href }}/playbook\" style=\"text-decoration:none;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#1155cc;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">the Playbook</span></a><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">:</span><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"> Follow a series of bite-sized tutorials to help you learn the tools and how to use them to ignite your team’s full potential.</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">A streamlined homepage with team dashboard:</span><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"> See a birds-eye view of your team’s activity on Rising Team with our re-designed homepage.</span></p></li><li dir=\"ltr\" style=\"list-style-type:disc;font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\" aria-level=\"1\"><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\" role=\"presentation\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">New activity in The Huddle, our private Slack community:</span><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"> Get to know other managers who are using Rising Team with a system of fun daily prompts that we call “Magic Hat”! You’re eligible to join The Huddle after you sign up. (Soon we’ll be giving managers the ability to use Magic Hat with your own teams.)</span></p></li></ul><p dir=\"ltr\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">We envision a world where everyone in the workforce is deeply understood, supported, and empowered to reach their goals. We’re proud to see managers using Rising Team to do just that.</span></p><p dir=\"ltr\" style=\"margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;\"><span style=\"font-size: 11pt; font-family: Roboto, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\">My team and I—entirely remote since the very beginning!—are so excited to release this new version. Here we are in a recent team meeting with our Friday dress-up hat theme. We’re here to help, so simply reply to this email to get in touch.</span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><span style=\"font-size:11pt;font-family:Roboto,sans-serif;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;\"><br></span></p><p dir=\"ltr\" style=\"line-height:1.38;margin-top:0pt;margin-bottom:0pt;\"><img src=\"https://risingteam-js.s3.amazonaws.com/django-summernote/2021-02-23/5b9de9f7-af8c-4180-87a0-9c8adaa490f3.jpg\" style=\"width: 698px;\"></p>",
+    "cta_content": "Get Started",
+    "cta_href": null,
+    "signature": "Thanks,<br />Jennifer Dulski<br />Founder and CEO",
+    "subscription_group": null
+  }
+}
+]

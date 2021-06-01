@@ -7,19 +7,35 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     avatar = models.URLField(max_length=255)
+    email = models.EmailField("email address", unique=True)
     full_name = models.CharField(max_length=255)
     verified = models.BooleanField(default=False)
     points = models.IntegerField(default=0)
 
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = []
+
     @property
     def gravatar(self):
-        return hashlib.md5(self.email.encode('utf-8')).hexdigest()
+        return hashlib.md5(self.email.encode("utf-8")).hexdigest()
 
 
 class Friends(models.Model):
     name = models.CharField(max_length=255)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owner')
-    members = models.ManyToManyField(User, related_name='members')
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name="owner")
+    members = models.ManyToManyField(User, related_name="members")
+
+
+class UserCompetition(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    competition = models.ForeignKey("Competition", on_delete=models.CASCADE)
+    points = models.IntegerField(default=0)
+
+
+class Competition(models.Model):
+    name = models.CharField(max_length=255)
+    slug = models.SlugField()
+    users = models.ManyToManyField(User, through=UserCompetition)
 
 
 class Points(models.Model):
@@ -34,6 +50,7 @@ class Group(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     points = models.ForeignKey(Points, on_delete=models.CASCADE)
+    competition = models.ForeignKey(Competition, on_delete=models.CASCADE, null=True)
 
 
 class Competitor(models.Model):
@@ -44,7 +61,7 @@ class Bet(models.Model):
     score_a = models.IntegerField(null=True)
     score_b = models.IntegerField(null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    game = models.ForeignKey('Game', on_delete=models.CASCADE)
+    game = models.ForeignKey("Game", on_delete=models.CASCADE)
     validated = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -56,9 +73,12 @@ class Bet(models.Model):
             return points.perfect
         else:
             if (
-                game.score_a > game.score_b and self.score_a > self.score_b or
-                game.score_a == game.score_b and self.score_a == self.score_b or
-                game.score_a < game.score_b and self.score_a < self.score_b
+                game.score_a > game.score_b
+                and self.score_a > self.score_b
+                or game.score_a == game.score_b
+                and self.score_a == self.score_b
+                or game.score_a < game.score_b
+                and self.score_a < self.score_b
             ):
                 return group.points.win
             else:
@@ -69,8 +89,12 @@ class Bet(models.Model):
 class GameManager(models.Manager):
     def next(self, user, limit=1):
         now = datetime.now(timezone.utc)
-        my_games = Bet.objects.filter(user=user).values_list('game_id', flat=True)
-        games = self.filter(start__gte=now).exclude(id__in=my_games).order_by('order')[:limit]
+        my_games = Bet.objects.filter(user=user).values_list("game_id", flat=True)
+        games = (
+            self.filter(start__gte=now)
+            .exclude(id__in=my_games)
+            .order_by("order")[:limit]
+        )
         return games
 
 
@@ -79,20 +103,24 @@ class Game(models.Model):
     start = models.DateTimeField()
     score_a = models.IntegerField(null=True)
     score_b = models.IntegerField(null=True)
-    group = models.ForeignKey(Group, on_delete=models.CASCADE,
-                              related_name='group')
-    competitor_a = models.ForeignKey(Competitor, on_delete=models.CASCADE,
-                                     related_name='competitor_a')
-    competitor_b = models.ForeignKey(Competitor, on_delete=models.CASCADE,
-                                     related_name='competitor_b')
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name="group")
+    competitor_a = models.ForeignKey(
+        Competitor, on_delete=models.CASCADE, related_name="competitor_a"
+    )
+    competitor_b = models.ForeignKey(
+        Competitor, on_delete=models.CASCADE, related_name="competitor_b"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    bets = models.ManyToManyField(User, through='Bet')
+    bets = models.ManyToManyField(User, through="Bet")
+    venue = models.CharField(max_length=255, null=True)
+    competition = models.ForeignKey(Competition, on_delete=models.CASCADE)
 
     objects = GameManager()
 
     def compute_points(self):
         from betting.tasks import update_points
+
         if self.score_a is not None and self.score_b is not None:
             update_points.delay(self.id)
             return True
