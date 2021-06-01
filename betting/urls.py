@@ -3,14 +3,13 @@ from rest_framework.routers import DefaultRouter
 from betting import views
 
 router = DefaultRouter()
-router.register(r'groups', views.GroupViewSet)
-router.register(r'competitors', views.CompetitorViewSet)
-router.register(r'games', views.GameViewSet)
-router.register(r'users', views.UserViewSet)
-router.register(r'bets', views.BetViewSet)
-router.register(r'friends', views.FriendsViewSet)
+router.register(r"groups", views.GroupViewSet)
+router.register(r"competitors", views.CompetitorViewSet)
+router.register(r"games", views.GameViewSet)
+router.register(r"users", views.UserViewSet)
+router.register(r"bets", views.BetViewSet)
+router.register(r"friends", views.FriendsViewSet)
 
 urlpatterns = [
-    path('auth', views.auth),
-    re_path(r'^', include(router.urls)),
+    re_path(r"^", include(router.urls)),
 ]

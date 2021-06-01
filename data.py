@@ -1,5 +1,5 @@
 import json
-from betting.models import Competitor, Game, Points, Group
+from betting.models import Competition, Competitor, Game, Points, Group
 
 """
 function extract(game) { return { group: game.find('.fi__info__group').text(), competitor_a: game.find('.home .fi-t__nText').text(), competitor_b: game.find('.away .fi-t__nText').text(), start: '2018-' + (String(game.find('.fi-s__score.fi-s__date-HHmm').data('daymonthutc')).substring(2, 4)) + '-' + (String(game.find('.fi-s__score.fi-s__date-HHmm').data('daymonthutc')).substring(0, 2)) + 'T' + game.find('.fi-s__score.fi-s__date-HHmm').data('timeutc') + ':00.000Z' }}
@@ -31,13 +31,16 @@ function extract(tbody) {
 with open("./euro-2021.json") as file:
     data = json.load(file)
 
+    competition = Competition.objects.create(name="Euro 2021", slug="euro-2021")
     groupStage = Points.objects.create(perfect=100, win=50, loss=0)
 
     defaults = {"points": groupStage}
 
     index = 1
     for d in data:
-        group, created = Group.objects.get_or_create(name=d["group"], defaults=defaults)
+        group, created = Group.objects.get_or_create(
+            name=d["group"], competition=competition, defaults=defaults
+        )
         competitor_a, created = Competitor.objects.get_or_create(name=d["competitor_a"])
         competitor_b, created = Competitor.objects.get_or_create(name=d["competitor_b"])
 
@@ -46,7 +49,9 @@ with open("./euro-2021.json") as file:
             "competitor_a": competitor_a,
             "competitor_b": competitor_b,
             "start": d["start"],
+            "venue": d["venue"],
             "order": index,
+            "competition": competition,
         }
         index += 1
         Game.objects.create(**values)

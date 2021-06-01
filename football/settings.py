@@ -20,6 +20,9 @@ from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.redis import RedisIntegration
 from sentry_sdk.integrations.rq import RqIntegration
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = config("DEBUG", default=False, cast=bool)
+
 sentry_sdk.init(
     dsn=config("SENTRY_DSN", default=None),
     integrations=[RedisIntegration(), RqIntegration(), DjangoIntegration()],
@@ -28,7 +31,7 @@ sentry_sdk.init(
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+WEB_DIRECTORY = config("COMMIT", default="latest")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -36,10 +39,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("SECRET_KEY", "")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = ["http://localhost:3000", "localhost"]
+HOST = config("HOST", default="localhost:3000")
+ALLOWED_HOSTS = [HOST]
+if DEBUG:
+    ALLOWED_HOSTS.append("localhost")
 
 
 # Application definition
@@ -54,8 +58,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "corsheaders",
     "rest_framework",
-    "account",
+    "courier",
+    "authentication",
     "betting",
+    "web",
 ]
 
 MIDDLEWARE = [
@@ -71,7 +77,9 @@ MIDDLEWARE = [
 
 SECURE_SSL_REDIRECT = not DEBUG
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+CORS_ALLOWED_ORIGINS = ["https://football.oertel.fr"]
+if DEBUG:
+    CORS_ALLOWED_ORIGINS.append("http://localhost:3000")
 CORS_ALLOW_CREDENTIALS = True
 CORS_URLS_REGEX = r"^/api/.*$"
 
@@ -149,3 +157,6 @@ STATIC_URL = "/static/"
 BUNDLE_HOST = os.environ.get("BUNDLE_HOST", "http://localhost:3000/static/js/")
 BUNDLE_VERSION = os.environ.get("BUNDLE_VERSION")
 STATIC_HOST = os.environ.get("STATIC_HOST", "")
+
+EMAIL_BACKEND = "anymail.backends.postmark.EmailBackend"
+ANYMAIL = {"POSTMARK_SERVER_TOKEN": config("POSTMARK_SERVER_TOKEN", default=None)}

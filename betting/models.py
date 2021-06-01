@@ -7,9 +7,13 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     avatar = models.URLField(max_length=255)
+    email = models.EmailField("email address", unique=True)
     full_name = models.CharField(max_length=255)
     verified = models.BooleanField(default=False)
     points = models.IntegerField(default=0)
+
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = []
 
     @property
     def gravatar(self):
@@ -22,8 +26,16 @@ class Friends(models.Model):
     members = models.ManyToManyField(User, related_name="members")
 
 
+class UserCompetition(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    competition = models.ForeignKey("Competition", on_delete=models.CASCADE)
+    points = models.IntegerField(default=0)
+
+
 class Competition(models.Model):
     name = models.CharField(max_length=255)
+    slug = models.SlugField()
+    users = models.ManyToManyField(User, through=UserCompetition)
 
 
 class Points(models.Model):
@@ -38,11 +50,11 @@ class Group(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     points = models.ForeignKey(Points, on_delete=models.CASCADE)
+    competition = models.ForeignKey(Competition, on_delete=models.CASCADE, null=True)
 
 
 class Competitor(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.SlugField()
 
 
 class Bet(models.Model):
@@ -101,6 +113,7 @@ class Game(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     bets = models.ManyToManyField(User, through="Bet")
+    venue = models.CharField(max_length=255, null=True)
     competition = models.ForeignKey(Competition, on_delete=models.CASCADE)
 
     objects = GameManager()
