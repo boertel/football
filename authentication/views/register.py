@@ -1,3 +1,4 @@
+from django.contrib.auth import login as django_login
 from rest_framework import status
 from rest_framework.generics import GenericAPIView, CreateAPIView
 from rest_framework.response import Response
@@ -15,6 +16,7 @@ class RegisterView(CreateAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = self.process_create(serializer)
+        django_login(request, user)
         response_serializer = self.response_serializer_class(user)
         return Response(response_serializer.data, status=status.HTTP_201_CREATED)
 
