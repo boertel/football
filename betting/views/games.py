@@ -8,7 +8,7 @@ from rest_framework.permissions import IsAdminUser
 
 from betting.serializers import GameSerializer, BetSerializer
 from betting.exceptions import GameLocked
-from betting.models import Game, Bet, Competition
+from betting.models import Game, Bet, Competition, UserCompetition
 from betting.permissions import IsAdminOrReadOnly
 
 
@@ -75,6 +75,9 @@ class GameViewSet(viewsets.ModelViewSet):
                 return Response({"lockdown": True}, status=403)
 
             bet, created = Bet.objects.get_or_create(game=game, user=request.user)
+            UserCompetition.objects.get_or_create(
+                user=request.user, competition=game.competition
+            )
             updated = False
             if "score_a" in request.data:
                 updated = True
