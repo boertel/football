@@ -1,8 +1,9 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
-from django.forms import EmailField
+from django.forms import EmailField, CharField as DjangoCharField
 
 from rest_framework import serializers
+from rest_framework.serializers import CharField
 
 from .base import DjangoFormSerializer
 from .fields import PasswordField, LowercaseEmailField
@@ -14,8 +15,11 @@ class UserModelCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = UserModel
         # TODO handle USERNAME_FIELD
-        fields = ("email",)
-        field_classes = {"email": EmailField}
+        fields = (
+            "email",
+            "full_name",
+        )
+        field_classes = {"email": EmailField, "full_name": DjangoCharField}
 
 
 class RegisterSerializer(DjangoFormSerializer):
@@ -25,6 +29,7 @@ class RegisterSerializer(DjangoFormSerializer):
     email = LowercaseEmailField()
     password1 = PasswordField()
     password2 = PasswordField()
+    full_name = CharField()
 
     form_class = UserModelCreationForm
 
