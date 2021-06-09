@@ -1,5 +1,6 @@
 from .groups import GroupViewSet
 from .competitors import CompetitorViewSet
+from .competitions import CompetitionViewSet
 from .games import GameViewSet
 from .bets import BetViewSet
 from .users import UserViewSet
