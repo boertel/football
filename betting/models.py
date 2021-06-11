@@ -122,7 +122,7 @@ class Game(models.Model):
         from betting.tasks import update_points
 
         if self.score_a is not None and self.score_b is not None:
-            update_points.delay(self.id)
+            update_points(self.id)
             return True
         return False
 

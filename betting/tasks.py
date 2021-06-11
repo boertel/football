@@ -1,5 +1,4 @@
-from betting.models import Game, Bet
-
+from betting.models import Game, Bet, UserCompetition
 
 
 def update_points(game_id):
@@ -13,10 +12,13 @@ def update_points(game_id):
         try:
             points = bet.points(game_points)
             if points is not None:
-                bet.user.points += points
-                bet.user.save()
+                user_competition = UserCompetition.objects.get(
+                    user_id=bet.user_id, competition_id=game.competition_id
+                )
+                user_competition.points += points
+                user_competition.save()
                 bet.validated = True
                 bet.save()
         except Exception as e:
-            #logger.error(e)
+            # logger.error(e)
             pass

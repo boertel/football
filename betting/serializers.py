@@ -91,10 +91,11 @@ class GameSerializer(serializers.ModelSerializer):
 
 class CompetitionUserSerializer(serializers.ModelSerializer):
     slug = serializers.ReadOnlyField(source="competition.slug")
+    name = serializers.ReadOnlyField(source="competition.name")
 
     class Meta:
         model = UserCompetition
-        fields = ("points", "slug")
+        fields = ("points", "slug", "name")
 
 
 class UserSerializer(serializers.ModelSerializer):
