@@ -1,5 +1,6 @@
 import hashlib
 from datetime import datetime, timedelta, timezone
+from django.utils import timezone
 
 from django.db import models
 from django.contrib.auth.models import AbstractUser
@@ -30,6 +31,18 @@ class UserCompetition(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     competition = models.ForeignKey("Competition", on_delete=models.CASCADE)
     points = models.IntegerField(default=0)
+
+    def compute_points(self):
+        points = 0
+        now = timezone.now()
+        bets = Bet.objects.filter(
+            user_id=self.user_id,
+            game__competition_id=self.competition_id,
+            game__start__lte=now,
+        )
+        for bet in bets:
+            points += bet.points()
+        return points
 
 
 class Competition(models.Model):
@@ -66,9 +79,11 @@ class Bet(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def points(self, points):
+    def points(self, points=None):
         game = self.game
         group = game.group
+        if points is None:
+            points = group.points
         if game.score_a == self.score_a and game.score_b == self.score_b:
             return points.perfect
         else:
@@ -117,6 +132,9 @@ class Game(models.Model):
     competition = models.ForeignKey(Competition, on_delete=models.CASCADE)
 
     objects = GameManager()
+
+    def __str__(self):
+        return f"Game object ({self.id}) ({self.competitor_a.name} vs. {self.competitor_b.name})"
 
     def compute_points(self):
         from betting.tasks import update_points
