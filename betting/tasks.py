@@ -20,5 +20,4 @@ def update_points(game_id):
                 bet.validated = True
                 bet.save()
         except Exception as e:
-            # logger.error(e)
-            pass
+            print(e)
