@@ -12,7 +12,7 @@ def update_points(game_id):
         try:
             points = bet.points(game_points)
             if points is not None:
-                user_competition = UserCompetition.objects.get(
+                user_competition, created = UserCompetition.objects.get_or_create(
                     user_id=bet.user_id, competition_id=game.competition_id
                 )
                 user_competition.points += points
