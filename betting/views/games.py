@@ -26,7 +26,14 @@ class GameViewSet(viewsets.ModelViewSet):
             bets_queryset = bets_queryset.filter(game_id=self.kwargs["pk"])
         for bet in bets_queryset:
             bets[bet.game_id] = bet
-        queryset = Game.objects.all()
+        queryset = (
+            Game.objects.all()
+            .select_related("group")
+            .select_related("group__points")
+            .select_related("competition")
+            .select_related("competitor_a")
+            .select_related("competitor_b")
+        )
         competition_slug = self.request.query_params.get("competition")
         if competition_slug is not None:
             competition = Competition.objects.get(slug=competition_slug)
