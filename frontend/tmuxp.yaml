@@ -1,0 +1,22 @@
+session_name: football-ui
+windows:
+    - window_name: football-ui
+      layout: tiled
+      options:
+          main-pane-height: 10
+      shell_command_before:
+          - vasy football-ui
+      panes:
+      - shell_command:
+          - BROWSWER=none yarn start
+      - shell_command:
+          - cd ../football/
+          - poetry shell
+          - source .env
+          - python manage.py runserver 0.0.0.0:8000
+      - shell_command:
+          - cd ./src/
+          - git st
+      - shell_command:
+          - cd ../football/
+          - git st

@@ -1,0 +1,173 @@
+$default-button = $grey
+$default-button-hover = $grey-dark
+
+$primary-button = $primary
+$primary-button-hover = $primary-dark
+
+$secondary-button = $secondary
+$secondary-button-hover = $secondary-dark
+
+$danger-button = $danger
+$danger-button-hover = $danger-dark
+
+
+.button
+    margin: 0
+    border: none
+    border-radius: 2px
+    font-weight: 600
+    color: $default-button
+    background-color: $default-button-hover
+    border: 1px solid $default-button-hover
+    outline: none
+    cursor: pointer
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    box-sizing: border-box
+    height: var(--input-height)
+
+    svg
+        fill: currentcolor
+
+        &:first-child
+            margin-right: 8px;
+
+        &:last-child
+            margin-left: 8px;
+
+
+    &.xsmall
+        font-size: 13px
+        padding: 5px 10px
+        min-width: 60px
+
+        & + .button
+            margin-left: 12px
+
+        svg
+            width: 16px
+            height: 16px
+
+    &, &.small
+        font-size: 14px
+        padding: 9px 16px
+        min-width: 80px
+
+        & + .button
+            margin-left: 20px
+
+        svg
+            width: 18px
+            height: 18px
+
+    &.medium
+        font-size: 16px
+        padding: 11px 16px
+        min-width: 120px
+        max-width: 240px
+
+        & + .button
+            margin-left: 24px
+
+        svg
+            width: 18px
+            height: 18px
+
+    &.large
+        font-size: 20px
+        padding: 13px 22px
+        min-width: 180px
+
+        svg
+            width: 24px
+            height: 24px
+
+    &.outline
+        border-style: solid
+        border-width: 1px
+        background-color: transparent
+
+    &.link
+        border: none
+
+        &:hover, &:focus
+            text-decoration: underline
+
+
+    animation()
+        transition-property: unquote(arguments)
+        transition-duration: .2s
+        transition-timing-function: ease-in-out
+
+    loaderColor(colour, color-hover=#fff)
+        .loader
+            div
+                background-color: colour !important
+
+        if color-hover == '#fff'
+            &:hover
+                .loader
+                    div
+                        background-color: color-hover !important
+
+
+    variant(colour, color-hover, text-color=#fff)
+        background-color: colour
+        // so buttons are aligned if used next to a button.outline
+        border: 1px solid colour
+        color: text-color
+        animation("background-color, color, border-color")
+        loaderColor(text-color)
+
+        svg
+            animation("fill, stroke")
+
+        &:hover, &:focus
+            background-color: color-hover
+            border-color: color-hover
+            color: text-color
+
+        // Outline style (no background but border)
+        &.outline
+            border-color: colour
+            color: colour
+            background-color: transparent
+            loaderColor(colour, text-color)
+
+            &:hover
+                background-color: colour
+                color: text-color
+
+        // Link style (no border or background)
+        &.link
+            color: colour
+            background-color: transparent
+            border: none
+
+            loaderColor(colour)
+
+            &:hover, &:hover
+                background-color: transparent
+                color: color-hover
+
+
+    // Variants
+    &
+        variant($default-button, $default-button-hover)
+
+    &.primary, &[type=submit]
+        variant($primary-button, $primary-button-hover)
+
+    &.secondary
+        variant($secondary-button, $secondary-button-hover)
+
+    &.danger
+        variant($danger-button, $danger-button-hover)
+
+a.button
+    text-decoration: none
+
+input + .button
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0

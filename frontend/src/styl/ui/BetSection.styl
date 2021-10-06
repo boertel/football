@@ -1,0 +1,56 @@
+.bets
+    margin-top: pad(10)
+    border-top: 1px solid $border-color
+    padding-top: pad(2)
+
+    h3
+        display: flex
+        justify-content: space-between
+
+.bet-sections
+    margin-top: pad(4)
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-column-gap: pad(4)
+
+    @media(max-width: 700px)
+        grid-template-columns: 1fr
+        grid-row-gap: pad(6)
+
+.bet-section
+    h4
+        margin-bottom: pad(3)
+        text-align: center
+
+    &:first-child
+        h4
+            text-align: left
+
+    &:last-child
+        padding-right: 0
+        h4
+            text-align: right
+
+    @media(max-width: 700px)
+        &:last-child h4, h4
+            text-align: left
+
+
+.bet-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: pad(1) pad(2)
+
+    &.win
+        background-color: rgba($win, 0.2)
+
+    &.perfect
+        background-color: rgba($perfect, 0.2)
+
+    &.loss
+        background-color: rgba($loss, 0.2)
+
+    &.me
+        font-weight: 700

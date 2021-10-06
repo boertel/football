@@ -1,0 +1,154 @@
+
+.day
+    margin-bottom: pad(10)
+
+
+.game
+    display: block
+    border-radius: $border-radius
+    margin: pad(4) 0
+    text-decoration: none
+    color: $default
+    box-shadow: 0px 0px 6px 1px rgba(173, 173, 173, 0.5)
+    transition: box-shadow .3s ease-in-out
+    background-color: #fff
+    border-radius: 4px
+
+    &:hover
+        box-shadow: 0px 0px 6px 1px rgba(130, 130, 130, 0.8)
+
+
+.bg-win
+    background-color: rgba($win, 0.2)
+
+.bg-perfect
+    background-color: rgba($perfect, 0.2)
+
+.bg-loss
+    background-color: rgba($loss, 0.2)
+
+.bg-unknow
+    background-color: #fff
+
+.bg-current
+    background-color: rgba($primary, 0.27)
+
+
+
+.border-win
+    border-color: rgba($win, 0.2)
+
+.border-perfect
+    border-color: rgba($perfect, 0.2)
+
+.border-loss
+    border-color: rgba($loss, 0.2)
+
+.border-current
+    border-color: rgba($primary, 0.2)
+
+.text-win
+    color: $win
+
+.text-perfect
+    color: $perfect
+
+.text-loss
+    color: $loss
+
+.text-current
+    color: $primary
+
+
+.game-card
+    position: relative
+    display: grid
+    grid-template-columns: 40% 10% 10% 40%
+    grid-template-rows: 20% 60% 20%
+    padding: pad(4)
+
+    &.current
+        border-color: $primary
+        background-color: rgba($primary, 0.2)
+
+    &.win
+        border-color: $win
+        background-color: rgba($win, 0.2)
+
+    &.perfect
+        border-color: $perfect
+        background-color: rgba($perfect, 0.2)
+
+    &.loss
+        border-color: $loss
+        background-color: rgba($loss, 0.2)
+
+    > div
+        margin: pad(2)
+
+    .time, .predictions
+        grid-column-end: span 2
+        justify-self: center
+        +mobile()
+            grid-column-end: span 2
+
+    .predictions
+        font-weight: bold
+        &.text-perfect
+            color: #806513
+
+    .time
+        display: flex
+        align-items: center
+
+    .badge
+        justify-self: flex-start
+        align-items: center
+        align-self: center
+        +mobile()
+            grid-column-end: span 1
+        &.points, &.live
+            justify-self: flex-end
+
+    .score
+        grid-column-end: span 2
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: pad(6)
+
+        .competitor
+            display: flex
+            align-items: center
+            flex: 1
+            flex-direction: row-reverse
+            padding: 0 pad(6)
+
+            +mobile()
+                flex-direction: column
+                margin-bottom: pad(4)
+
+            .competitor-name
+                padding: 0 pad(4)
+
+        +mobile()
+            flex-direction: column
+
+    .competitor-b
+        flex-direction: row-reverse
+        +mobile()
+            flex-direction: column
+
+        .competitor
+            flex-direction: row
+            +mobile()
+                flex-direction: column
+
+    .progress-bar
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 3px
+        margin: 0
+        background-color: $grey-light

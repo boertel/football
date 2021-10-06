@@ -1,0 +1,27 @@
+header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 20px;
+  background: $secondary;
+  color: #fff;
+  z-index: 1;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+header .header-content {
+  max-width: 800px;
+  padding: pad(1) pad(6);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header .header-profile {
+  display: flex;
+  align-items: center;
+}

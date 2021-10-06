@@ -1,0 +1,31 @@
+.score-input
+    width: 60px
+    position: relative
+
+    input
+        border-radius: 4px
+        outline: none
+        border: 2px solid transparent
+        width: 100%;
+        padding: pad(2)
+        font-size: 28px
+        text-align: center
+        border-color: rgba($grey, 0.2)
+
+        &:hover, &:focus
+            border-color: $primary
+
+        &[disabled]
+            border-color: transparent
+            background: rgba(0, 0, 0, 0.1)
+
+    .async-status
+        position: absolute
+        top: 100%
+        width: 100%
+        text-align: center
+        transition: opacity .4s ease-out 3s
+        color: $win
+
+        &.saved
+            opacity: 0

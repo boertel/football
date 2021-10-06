@@ -1,0 +1,38 @@
+[data-reach-dialog-overlay]
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 2
+
+[data-reach-dialog-content]
+    margin: pad(6) !important
+    padding: pad(6) !important
+    padding-top: pad(2) !important
+    min-width: 300px
+    width: 100% !important
+    max-width: 900px
+    background: #fff
+    border-radius: $border-radius
+    z-index: 1
+    position: absolute
+    top: 0
+    bottom: 0
+    overflow-y: auto
+
+    +tablet()
+        margin: 0
+        height: 100%
+
+    .modal-header
+        display: flex
+        justify-content: flex-end
+        font-size: 28px
+
+        a
+            cursor: pointer
+
+    .modal-actions
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: pad(10)

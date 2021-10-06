@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BUCKET="football-worldcup2018/bundles"
+HASH=$(git rev-parse --short HEAD)
+
+GENERATE_SOURCEMAP="false" PUBLIC_URL="https://s3-us-west-2.amazonaws.com/$BUCKET/$HASH/" REACT_APP_API_DOMAIN="https://football.oertel.fr" yarn build 1> /dev/null
+
+GITROOT=$(git root)
+
+aws s3 cp $GITROOT/build/ s3://$BUCKET/$HASH --recursive 1> /dev/null
+
+echo $HASH

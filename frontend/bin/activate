@@ -1,0 +1,17 @@
+#!/bin/bash
+
+BUNDLE_ID=""
+while read line; do
+    BUNDLE_ID=$line
+done < "${1:-/dev/stdin}"
+
+
+
+HEROKU_APP="football-worldcup-2018"
+
+if [[ -z "$BUNDLE_ID" ]]; then
+    echo "missing bundle hash"
+    exit 1
+fi
+
+heroku config:set COMMIT=$BUNDLE_ID --app $HEROKU_APP

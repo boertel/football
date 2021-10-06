@@ -1,0 +1,12 @@
+:root {
+  --grey-100: #ccc;
+  --grey-300: #9a9a9a;
+  --grey: #808080;
+  --grey-900: #343434;
+  --primary: #0a60fe;
+  --danger: #cf312f;
+  --default: #333;
+  --perfect: #fbe846;
+  --win: #5e9d39;
+  --loss: #cf312f;
+}

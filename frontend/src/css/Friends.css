@@ -1,0 +1,12 @@
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.actions > * {
+  margin-bottom: pad(4);
+}
+.friend-list {
+  margin-bottom: pad(4);
+}

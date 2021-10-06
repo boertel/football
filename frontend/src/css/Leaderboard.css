@@ -1,0 +1,23 @@
+.leaderboard {
+  margin-bottom: pad(10);
+}
+.leaderboard h3 {
+  margin-bottom: pad(4);
+}
+.leaderboard .list {
+  background-color: #fff;
+}
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: pad(4);
+  color: $default;
+  text-decoration: none;
+}
+.user:hover {
+  cursor: pointer;
+}
+.user.me {
+  font-weight: 700;
+}

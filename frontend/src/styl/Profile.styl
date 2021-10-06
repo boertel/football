@@ -1,0 +1,19 @@
+.profile
+    h2
+        display: flex
+        justify-content: space-between
+
+ul li
+    position: relative
+    &:after
+        content: attr(data-content)
+        position: absolute
+        top: -10px
+        left: 0px
+        width: 80px
+
+    &:last-child
+        &:after
+            right: 0
+            left: auto
+            text-align: right

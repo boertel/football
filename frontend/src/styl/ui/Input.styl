@@ -1,0 +1,30 @@
+$input-border-color = $grey-light
+$input-border-color-hover = $primary-dark
+
+$danger-border-color = $danger
+
+
+.text-input
+    border-top-left-radius: $border-radius
+    border-bottom-left-radius: $border-radius
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    border-width: 1px
+    border-style: solid
+    border-color: $input-border-color
+    padding: pad(2)
+    height: var(--input-height)
+
+    &:hover, &:focus
+        border-color: $input-border-color-hover
+        outline: none
+
+    &.danger
+        border-color: $danger
+        color: $danger
+
+        &:hover, &:focus
+            color: $default
+
+    & + :not(.button)
+        border-radius: $border-radius
