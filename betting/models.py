@@ -1,7 +1,9 @@
+from collections import defaultdict
 import hashlib
 from datetime import datetime, timedelta, timezone
-from django.utils import timezone
 
+from django.utils import timezone
+from django.db.models import Avg, Count, Min, Sum
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
@@ -49,6 +51,48 @@ class Competition(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField()
     users = models.ManyToManyField(User, through=UserCompetition)
+
+
+class Badge(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    competition = models.ForeignKey(Competition, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+
+    @classmethod
+    def best_group_results(cls, group):
+        bets = Bet.objects.filter(game__group=group, validated=True).select_related(
+            "game"
+        )
+        group_by = defaultdict(int)
+        for bet in bets:
+            group_by[bet.user_id] += bet.points()
+        sort = sorted(group_by.items(), key=lambda item: -item[1])
+        return sort
+
+    @classmethod
+    def most_perfects(cls, competition):
+        bets = Bet.objects.filter(
+            game__competition=competition, validated=True
+        ).select_related("game")
+        group_by = defaultdict(int)
+        for bet in bets:
+            if bet.score_a == bet.game.score_a and bet.score_b == bet.game.score_b:
+                group_by[bet.user_id] += 1
+        sort = sorted(group_by.items(), key=lambda item: -item[1])
+        return sort
+
+    @classmethod
+    def most_wins(cls, competition):
+        bets = Bet.objects.filter(
+            game__competition=competition, validated=True
+        ).select_related("game")
+        group_by = defaultdict(int)
+        for bet in bets:
+            # TODO have a function to compute that
+            if bet.score_a == bet.game.score_a and bet.score_b == bet.game.score_b:
+                group_by[bet.user_id] += 1
+        sort = sorted(group_by.items(), key=lambda item: -item[1])
+        return sort
 
 
 class Points(models.Model):
