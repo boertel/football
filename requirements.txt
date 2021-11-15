@@ -21,7 +21,7 @@ idna==2.10
 jmespath==0.10.0
 mypy-extensions==0.4.3
 pathspec==0.8.1
-pip==21.0.1
+pip==21.1
 pipenv==2018.5.18
 psycopg2==2.8.6
 psycopg2-binary==2.8.6
