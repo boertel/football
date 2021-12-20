@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -u
+
+PYPROJECT_DIFF=$(git diff --cached --name-only --diff-filter=ACM -- "pyproject.toml")
+
+if [[ -n "$PYPROJECT_DIFF" ]]; then
+    echo "pyproject.toml has been updated. Re-generating a new requirements.txt..."
+    poetry export -f requirements.txt --output requirements.txt --without-hashes
+    git add requirements.txt
+fi
