@@ -64,7 +64,6 @@ INSTALLED_APPS = [
     "storages",
     "django.contrib.staticfiles",
     "corsheaders",
-    "django_extensions",
     "rest_framework",
     "courier",
     "authentication",
