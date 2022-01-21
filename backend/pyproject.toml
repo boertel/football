@@ -15,7 +15,7 @@ django-rq = "^2.4.1"
 django-anymail = {extras = ["postmark"], version = "^8.3"}
 django-storages = "^1.11.1"
 boto3 = "^1.17.84"
-ipython = "^7.24.1"
+ipython = "^7.31.1"
 psycopg2-binary = "^2.9.2"
 
 [tool.poetry.dev-dependencies]
