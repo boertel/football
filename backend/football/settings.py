@@ -84,7 +84,7 @@ MIDDLEWARE = [
 
 SECURE_SSL_REDIRECT = not DEBUG
 
-CORS_ALLOWED_ORIGINS = ["https://football.oertel.fr"]
+CORS_ALLOWED_ORIGINS = [f"https://{HOST}"]
 if DEBUG:
     CORS_ALLOWED_ORIGINS.append("http://localhost:3000")
 CORS_ALLOW_CREDENTIALS = True
