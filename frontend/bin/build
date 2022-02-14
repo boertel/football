@@ -1,9 +1,9 @@
 #!/bin/bash
 
-BUCKET="football-worldcup2018/bundles"
+BUCKET="football-worldcup2018/builds"
 HASH=$(git rev-parse --short HEAD)
 
-GENERATE_SOURCEMAP="false" PUBLIC_URL="https://s3-us-west-2.amazonaws.com/$BUCKET/$HASH/" REACT_APP_API_DOMAIN="https://football-worldcup-2018.herokuapp.com/" yarn build 1> /dev/null
+GENERATE_SOURCEMAP="false" PUBLIC_URL="https://s3-us-west-2.amazonaws.com/$BUCKET/$HASH/" REACT_APP_API_DOMAIN="https://football-worldcup-2018.herokuapp.com" yarn build 1> /dev/null
 
 GITROOT=$(git root)
 
