@@ -70,7 +70,6 @@ INSTALLED_APPS = [
     "courier",
     "authentication",
     "betting",
-    "web",
 ]
 
 MIDDLEWARE = [
