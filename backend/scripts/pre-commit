@@ -8,5 +8,6 @@ PYPROJECT_DIFF=$(git diff --cached --name-only --diff-filter=ACM -- "$POETRY_REP
 
 if [[ -n "$PYPROJECT_DIFF" ]]; then
     echo "pyproject.toml has been updated. Re-generating a new requirements.txt..."
-    cd "$POETRY_REPO" && poetry export -f requirements.txt --dev --output requirements.txt --without-hashes && git add requirements.txt
+    cd "$POETRY_REPO" && poetry export -f requirements.txt --dev --output ../requirements.txt --without-hashes
+    cd ../ && git add requirements.txt
 fi
