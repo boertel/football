@@ -3,8 +3,7 @@ import logging
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.http import Http404
-
-from web.views import index
+from s3_template_loader.views import index
 
 logger = logging.getLogger(__name__)
 

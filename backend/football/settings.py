@@ -19,6 +19,7 @@ import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.redis import RedisIntegration
 from sentry_sdk.integrations.rq import RqIntegration
+import s3_template_loader
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", default=False, cast=bool)
@@ -62,6 +63,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "storages",
+    "s3_template_loader",
     "django.contrib.staticfiles",
     "corsheaders",
     "rest_framework",
@@ -92,12 +94,12 @@ CORS_URLS_REGEX = r"^/api/.*$"
 
 ROOT_URLCONF = "football.urls"
 
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, "templates/")]
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [
-            os.path.join(BASE_DIR, "templates/"),
-        ],
+        "DIRS": TEMPLATE_DIRS,
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -105,32 +107,11 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-            ],
+            ]
         },
     },
+    s3_template_loader.utils.get_template_engine(),
 ]
-TEMPLATES.append(
-    {
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "NAME": "s3",
-        "DIRS": [],
-        "APP_DIRS": False,
-        "OPTIONS": {
-            "loaders": [
-                (
-                    "django.template.loaders.cached.Loader",
-                    ["web.loaders.S3TemplateLoader"],
-                )
-            ],
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
-            ],
-        },
-    }
-)
 
 WSGI_APPLICATION = "football.wsgi.application"
 
@@ -196,7 +177,7 @@ AWS_STORAGE_BUCKET_NAME = config("AWS_S3_BUCKET_NAME", default=None)
 AWS_DEFAULT_ACL = "public-read"
 AWS_QUERYSTRING_AUTH = False
 
-WEB_DIRECTORY = config("COMMIT", default="latest")
+S3_TEMPLATE_LOADER_BUILD_DIRECTORY = config("COMMIT", default="build")
 
 STATIC_HOST = os.environ.get("STATIC_HOST", "")
 
