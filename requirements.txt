@@ -16,7 +16,7 @@ django-cors-headers==3.11.0; python_version >= "3.7"
 django-rq==2.5.1
 django-s3-template-loader @ git+https://github.com/boertel/django-s3-template-loader/@7bc3b692752c95efc045cfda3159caff6e456ce7
 django-storages==1.12.3; python_version >= "3.5"
-django==3.2.2; python_version >= "3.6"
+django==3.2.17; python_version >= "3.6"
 djangorestframework==3.13.1; python_version >= "3.6"
 gunicorn==20.1.0; python_version >= "3.5"
 idna==3.3; python_version >= "3.5" and python_full_version < "3.0.0" or python_full_version >= "3.6.0" and python_version >= "3.5"
